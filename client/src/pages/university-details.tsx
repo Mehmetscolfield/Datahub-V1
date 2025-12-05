@@ -592,6 +592,7 @@ export default function UniversityDetails() {
              </div>
            </section>
         )}
+        </div>
       </div>
     </Layout>
   );
