@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { ArrowRight, GraduationCap, Globe2 } from "lucide-react";
 import { Link } from "wouter";
+import AISuggestion from "@/components/ai-suggestion";
 
 export default function Home() {
   const { t } = useI18n();
@@ -88,6 +89,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* AI Suggestion Section */}
+        <section className="py-12 md:py-20 px-4 md:px-8">
+          <AISuggestion />
         </section>
 
         {/* Features/Trust Section (Optional for depth) */}
