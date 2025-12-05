@@ -11,6 +11,11 @@ export default function Home() {
   return (
     <Layout>
       <div className="flex-1">
+        {/* AI Suggestion Section - At Top */}
+        <section className="py-4 px-4 md:px-8 bg-slate-100/50 border-b border-slate-200">
+          <AISuggestion />
+        </section>
+
         {/* Hero Section */}
         <section className="relative py-12 md:py-24 lg:py-32 px-4 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4 max-w-3xl mx-auto">
@@ -89,11 +94,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* AI Suggestion Section */}
-        <section className="py-12 md:py-20 px-4 md:px-8">
-          <AISuggestion />
         </section>
 
         {/* Features/Trust Section (Optional for depth) */}
