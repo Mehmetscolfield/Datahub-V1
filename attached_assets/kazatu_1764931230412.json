@@ -1,0 +1,112 @@
+{
+  "university": {
+    "id": "kazatu",
+    "name": "S. Seifullin Kazakh AgroTechnical Research University (KazATU)",
+    "city": "Astana",
+    "founded": 1957,
+    "ranking_kz": 20,
+    "official_website": "https://kazatu.edu.kz",
+    "tuition_range": "850 000 – 1 300 000 ₸",
+    "images": [
+      "https://kazatu.edu.kz/media/campus1.jpg",
+      "https://kazatu.edu.kz/media/campus2.jpg",
+      "https://kazatu.edu.kz/media/labs.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/VEFVtPqgq2o",
+
+    "about": {
+      "mission": "To prepare specialists in agriculture, biotechnology, veterinary science, engineering, and agribusiness.",
+      "history": "Kazakhstan’s main agricultural university with strong research focus.",
+      "leadership": "Rector: Kurmanov Kanat",
+      "achievements": [
+        "National leader in agricultural innovation",
+        "Strong biotechnology and vet medicine departments",
+        "Large modern research farms"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Agronomy",
+        "faculty": "Agriculture",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "850 000 ₸",
+        "description": "Crop science, soil science, agrochemistry, and agricultural technology.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Biology", "Chemistry"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "Veterinary Medicine",
+        "faculty": "Veterinary",
+        "duration": "5 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 300 000 ₸",
+        "description": "Animal diagnostics, surgery, pathology, and veterinary research.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Biology", "Chemistry"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Biotechnology",
+        "faculty": "Biotechnology",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 000 000 ₸",
+        "description": "Molecular biology, genetics, biotechnology, and lab research.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Biology", "Chemistry"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Information Systems",
+        "faculty": "IT & Engineering",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Software development, automation technologies, and agricultural IT.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": { "steps": ["UNT exam", "Apply", "Upload documents", "Enroll"] },
+      "international": {
+        "steps": ["Passport", "Transcripts", "English certificate if needed"]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Wageningen University (Netherlands)",
+        "Norwegian University of Life Sciences",
+        "University of Hohenheim (Germany)"
+      ]
+    },
+
+    "comparison": {
+      "city": "Astana",
+      "ielts_required": "4.5–5.0",
+      "program_count": 4,
+      "strengths": ["Agriculture", "Veterinary", "Biotechnology"]
+    }
+  }
+}

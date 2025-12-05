@@ -1,0 +1,182 @@
+{
+  "university": {
+    "id": "nu",
+    "name": "Nazarbayev University",
+    "city": "Astana",
+    "founded": 2010,
+    "ranking_kz": 1,
+    "official_website": "https://nu.edu.kz",
+    "tuition": "State-funded (0 ₸ for admitted students)",
+    "images": [
+      "https://nu.edu.kz/wp-content/uploads/2023/01/nu-campus.jpg",
+      "https://nu.edu.kz/wp-content/uploads/2023/01/nu-library.jpg",
+      "https://nu.edu.kz/wp-content/uploads/2023/01/nu-classrooms.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/0k1F7wC8cGo",
+
+    "about": {
+      "mission": "To become a leading research university that contributes globally to science, education, and innovation.",
+      "history": "Founded in 2010, NU was created as an English-medium autonomous research university with international academic partners.",
+      "leadership": "President: Shigeo Katsu",
+      "achievements": [
+        "Partnerships with Cambridge, Duke, Pittsburgh",
+        "One of the most selective universities in Central Asia",
+        "Fully English-medium programs",
+        "Strong STEM and research ecosystem"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Computer Science",
+        "faculty": "School of Engineering and Digital Sciences",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "0 ₸",
+        "description": "A rigorous STEM program covering algorithms, data structures, artificial intelligence, and systems engineering.",
+
+        "requirements": {
+          "UNT_applicable": false,
+          "NUET_required": true,
+          "IELTS_minimum": 6.5,
+          "IELTS_subscore_minimum": 6.0,
+          "TOEFL_minimum": 79,
+          "notes": "Strong Math and Physics background required."
+        },
+
+        "local_applicants": {
+          "requirements": [
+            "NUET exam",
+            "IELTS/TOEFL or NU English exam",
+            "ID card",
+            "High school diploma"
+          ]
+        },
+
+        "international_applicants": {
+          "requirements": [
+            "Passport",
+            "Academic transcripts",
+            "IELTS 6.5 / TOEFL 79",
+            "NUET (remote or onsite)"
+          ]
+        },
+
+        "deadlines": {
+          "early": "December–January",
+          "regular": "February–April",
+          "international": "December–May"
+        }
+      },
+
+      {
+        "program": "Robotics & Mechatronics",
+        "faculty": "School of Engineering and Digital Sciences",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "0 ₸",
+        "description": "Interdisciplinary program focused on automation, electronics, control systems, and robotics.",
+
+        "requirements": {
+          "NUET_required": true,
+          "IELTS_minimum": 6.5,
+          "TOEFL_minimum": 79
+        }
+      },
+
+      {
+        "program": "Mechanical Engineering",
+        "faculty": "School of Engineering and Digital Sciences",
+        "duration": "4 years",
+        "tuition_fee_year": "0 ₸",
+        "language": "English",
+
+        "description": "Covers thermodynamics, dynamics, robotics, design, and advanced manufacturing.",
+
+        "requirements": {
+          "NUET_required": true,
+          "IELTS_minimum": 6.5
+        }
+      },
+
+      {
+        "program": "Chemical Engineering",
+        "faculty": "School of Engineering and Digital Sciences",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "0 ₸",
+        "description": "Focuses on industrial chemistry, process engineering, materials science, and energy systems.",
+
+        "requirements": {
+          "NUET_required": true,
+          "IELTS_minimum": 6.5
+        }
+      },
+
+      {
+        "program": "Economics",
+        "faculty": "School of Sciences and Humanities",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "0 ₸",
+        "description": "Offers strong quantitative training in microeconomics, macroeconomics, and econometrics.",
+
+        "requirements": {
+          "NUET_required": true,
+          "IELTS_minimum": 6.5
+        }
+      },
+
+      {
+        "program": "Political Science & International Relations",
+        "faculty": "School of Sciences and Humanities",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "0 ₸",
+        "description": "Covers diplomatic studies, foreign policy, comparative politics, and regional studies.",
+
+        "requirements": {
+          "IELTS_minimum": 6.5,
+          "NUET_required": true
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Register for NUET",
+          "Submit English score",
+          "Upload documents",
+          "Final selection"
+        ],
+        "scholarships": ["Full tuition coverage", "Monthly stipend"]
+      },
+      "international": {
+        "steps": [
+          "Submit passport & transcripts",
+          "Take NUET",
+          "Provide English score"
+        ],
+        "scholarships": ["Merit-based scholarships"]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Duke University",
+        "Cambridge University",
+        "University of Pittsburgh",
+        "NUS",
+        "University College London"
+      ]
+    },
+
+    "comparison": {
+      "city": "Astana",
+      "ielts_required": "6.5",
+      "program_count": 6,
+      "strengths": ["Engineering", "Research", "International faculty"]
+    }
+  }
+}

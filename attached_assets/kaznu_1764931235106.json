@@ -1,0 +1,145 @@
+{
+  "university": {
+    "id": "kaznu",
+    "name": "Al-Farabi Kazakh National University",
+    "city": "Almaty",
+    "founded": 1934,
+    "ranking_kz": 2,
+    "official_website": "https://kaznu.kz",
+    "tuition_range": "900 000 – 1 300 000 ₸",
+    "images": [
+      "https://kaznu.kz/campus1.jpg",
+      "https://kaznu.kz/main-building.jpg",
+      "https://kaznu.kz/library.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/7lIKhHkJYwg",
+
+    "about": {
+      "mission": "To lead higher education and research in Kazakhstan through innovation, academic excellence, and global collaboration.",
+      "history": "One of the oldest and top-ranked universities in Kazakhstan.",
+      "leadership": "Rector: Zhanseit Tuimebayev",
+      "achievements": [
+        "Top QS-ranked university in Kazakhstan",
+        "Strong science and engineering programs",
+        "Leading research output"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Information Systems",
+        "faculty": "Faculty of Information Technology",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 200 000 ₸",
+        "description": "Covers software design, databases, enterprise systems, and applied IT.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math Literacy", "Reading", "Math", "Informatics"],
+          "profile_subject": "Informatics",
+          "profile_min_score": 15,
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Computer Science",
+        "faculty": "Faculty of IT",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 250 000 ₸",
+        "description": "Focuses on algorithms, software engineering, data science, and AI.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math Literacy", "Reading", "Math", "Physics"],
+          "profile_subject": "Physics",
+          "profile_min_score": 20,
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Law",
+        "faculty": "Faculty of Law",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 300 000 ₸",
+        "description": "Covers Kazakhstani and international law, judicial systems, and legal practice.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["Math Literacy", "Reading", "History of Kazakhstan", "Human Rights"],
+          "profile_subject": "Law exam",
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "International Relations",
+        "faculty": "Faculty of International Relations",
+        "duration": "4 years",
+        "language": "Kazakh/Russian/English",
+        "tuition_fee_year": "1 300 000 ₸",
+        "description": "Covers diplomacy, foreign policy, global security, and regional studies.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math Literacy", "Reading", "History of Kazakhstan", "World History"],
+          "profile_min_score": 15,
+          "IELTS_minimum": 6.0
+        }
+      },
+
+      {
+        "program": "Economics",
+        "faculty": "Faculty of Economics",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Focuses on microeconomics, macroeconomics, finance, and econometrics.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Geography"],
+          "IELTS_minimum": 5.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Take UNT",
+          "Select educational program group",
+          "Submit documents",
+          "Receive grant or pay tuition"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport and transcript",
+          "Take KazNU internal exam or provide IELTS",
+          "Apply online"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "University of Tsukuba",
+        "Moscow State University",
+        "Anadolu University",
+        "Ural Federal University"
+      ]
+    },
+
+    "comparison": {
+      "city": "Almaty",
+      "ielts_required": "5.5–6.0",
+      "program_count": 5,
+      "strengths": ["IT", "Law", "IR", "Economics"]
+    }
+  }
+}

@@ -1,0 +1,418 @@
+🎨 1. DESIGN REQUIREMENTS (VERY IMPORTANT)
+General Style
+
+Clean, modern, white + blue look (similar to Unitap)
+
+Rounded cards, smooth shadows, minimalistic UI
+
+Big hero section on homepage
+
+Three language selector (EN / KZ / RU)
+
+Responsive on mobile and desktop
+
+Consistent typography (Inter or Poppins)
+
+🏠 2. HOMEPAGE LAYOUT
+Top Navbar
+
+Logo (EduGuide KZ)
+
+Links: Universities, Programs, About
+
+Language selection (EN / KZ / RU)
+
+Dark/light toggle optional
+
+“Login” button (dummy)
+
+Hero Section
+
+Two large tiles side-by-side:
+
+Tile 1: Local Students
+
+Big card (50%)
+
+Image of students
+
+Title: “For Local Students”
+
+Subtitle: “UNT requirements, programs, scholarships & more.”
+
+Button: “Explore Universities”
+
+Clicking leads to /universities?mode=local
+
+Tile 2: International Students
+
+Big card (50%)
+
+Title: “For International Students”
+
+Subtitle: “English programs, tuition, application steps.”
+
+Button: “Start Exploring”
+
+Leads to /universities?mode=international
+
+📚 3. UNIVERSITIES LIST PAGE (/universities)
+Layout
+
+Same structure as Unitap:
+
+Left Side Fixed Filter Panel
+
+Include:
+
+Search bar:
+
+Search by name
+
+Search by program
+
+Filters:
+
+Region (new):
+
+Astana
+
+Almaty
+
+Shymkent
+
+East Kazakhstan
+
+West Kazakhstan
+
+Pavlodar
+
+Karaganda
+
+Taraz
+
+Semey
+
+Etc.
+
+City filter
+
+Tuition range slider (min–max)
+
+Programs (checkbox list):
+
+IT / CS
+
+Business
+
+Medicine
+
+Engineering
+
+Education
+
+Law
+
+Agriculture
+
+Arts & Humanities
+
+Language of Instruction
+
+Kazakh
+
+Russian
+
+English
+
+Minimum IELTS
+
+4.0 / 4.5 / 5.0 / 6.0
+
+Minimum UNT score (dropdown list)
+
+Filter Behavior
+
+Filters update results in real-time (client-side)
+
+Reset button clears all filters
+
+🏫 4. UNIVERSITY CARDS (RESULT LIST)
+
+Design exactly like Unitap cards:
+
+Card Elements:
+
+University image (rounded top)
+
+Ranking in Kazakhstan (ex: “#3 in Kazakhstan 2024”)
+
+Name (bold)
+
+City + Icon
+
+Tuition per year
+
+Button “View Details”
+
+Small heart icon (favorite)
+
+Program tags (CS, IT, Eng, Biz, etc.)
+
+Sorting Options:
+
+By tuition (low–high)
+
+By ranking
+
+By city
+
+By popularity
+
+📄 5. UNIVERSITY DETAILS PAGE (/university/[id])
+
+Layout similar to Unitap’s detailed view.
+
+Sections:
+Header
+
+Large hero image
+
+University name, city, ranking
+
+Favorite button
+
+Official website button
+
+Section 1: About the University
+
+Mission
+
+History
+
+Leadership
+
+Achievements
+
+Campus images (carousel)
+
+Section 2: 3D Tour
+
+Embed YouTube-like iframe:
+
+<iframe
+  width="100%"
+  height="400"
+  src={university.tour_video}
+  allowfullscreen
+/>
+
+
+Include gallery:
+
+Campus buildings
+
+Labs
+
+Library
+
+Dormitories
+
+Section 3: Academic Programs
+
+Display table/cards of programs:
+
+For each major program:
+
+Program name
+
+Faculty
+
+Duration
+
+Language
+
+Tuition
+
+Description
+
+UNT required subjects
+
+Minimum UNT score
+
+Minimum IELTS
+
+Section 4: Admission & Enrollment
+
+Two tabs:
+
+Local Students
+
+UNT minimum score
+
+UNT required subjects
+
+Steps to apply
+
+Deadlines
+
+Scholarship info
+
+International Students
+
+Passport
+
+Transcripts
+
+IELTS/TOEFL
+
+Deadlines
+
+Visa support
+
+Section 5: International Cooperation
+
+Partner universities
+
+Exchange programs
+
+Double degree options
+
+Erasmus+
+
+Map of partner locations
+
+Section 6: Comparison Mechanism
+
+Add button:
+
+Compare University
+
+
+Click adds to a comparison list.
+
+⚖️ 6. COMPARISON PAGE (/compare)
+
+Display selected universities side-by-side:
+
+Columns:
+
+Name
+
+City
+
+Tuition
+
+IELTS minimum
+
+UNT minimum
+
+Programs offered
+
+Ranking
+
+3D tour thumbnail
+
+Like Unitap comparison tables.
+
+🌍 7. MULTILINGUAL SUPPORT
+
+Use next-intl or next-translate.
+
+Languages:
+
+English
+
+Kazakh
+
+Russian
+
+Translate:
+
+Homepage
+
+Filters
+
+Buttons
+
+Labels
+
+Program titles
+
+📁 8. DATA LOADING LOGIC
+
+Load JSON files from /universities folder.
+
+Each file structure:
+
+{
+  "university": {
+      "id": "...",
+      "name": "...",
+      "city": "...",
+      "programs": [...],
+      "about": {...},
+      "admission_and_enrollment": {...},
+      "international_cooperation": {...},
+      "comparison": {...}
+  }
+}
+
+🧠 9. Search & Filter Logic
+
+Client-side search:
+
+Search by:
+
+Name
+
+Programs
+
+City
+
+Region
+
+Tuition
+
+IELTS
+
+UNT
+
+Language
+
+🎨 10. Visual Components to Include
+
+Cards
+
+Modals
+
+Accordion sections
+
+Tabs
+
+Tag badges
+
+Range sliders
+
+Responsive grid layout
+
+🚀 11. Final Deliverables
+
+AI Agent must produce:
+
+✔ Full Next.js project
+✔ Pages:
+
+/ (homepage)
+/universities
+/university/[id]
+/compare
+
+
+✔ Components folder
+✔ Filter sidebar
+✔ Data loader
+✔ Language switcher
+✔ Styled UI similar to Unitap
+✔ Ready-to-run development server
+✔ Instructions for deployment on Vercel

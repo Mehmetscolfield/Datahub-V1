@@ -1,0 +1,112 @@
+{
+  "university": {
+    "id": "kaznpu",
+    "name": "Abai Kazakh National Pedagogical University",
+    "city": "Almaty",
+    "founded": 1928,
+    "ranking_kz": 13,
+    "official_website": "https://abaiuniversity.edu.kz",
+    "tuition_range": "850 000 – 1 100 000 ₸",
+    "images": [
+      "https://abaiuniversity.edu.kz/media/campus1.jpg",
+      "https://abaiuniversity.edu.kz/media/campus2.jpg",
+      "https://abaiuniversity.edu.kz/media/students.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/grH2DV8z1LE",
+
+    "about": {
+      "mission": "To prepare highly qualified teachers, linguists, and educational leaders.",
+      "history": "Kazakhstan’s oldest pedagogical university with a strong humanities focus.",
+      "leadership": "Rector: Takir Balykbayev",
+      "achievements": [
+        "Top teacher education institution",
+        "Leading research in pedagogy",
+        "Strong language and humanities programs"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "English Language Education",
+        "faculty": "Foreign Languages",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Prepares English teachers with strong linguistic, pedagogical, and methodological skills.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["English", "World History"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Primary Education",
+        "faculty": "Pedagogy",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "950 000 ₸",
+        "description": "Covers child development, teaching methods, psychology, and classroom management.",
+
+        "requirements": {
+          "UNT_minimum": 50,
+          "UNT_subjects": ["Reading", "World History"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "Mathematics Education",
+        "faculty": "Mathematics & Physics",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 000 000 ₸",
+        "description": "Prepares mathematics teachers for secondary schools and gymnasiums.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Psychology",
+        "faculty": "Humanities",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "950 000 ₸",
+        "description": "Studies human behavior, mental processes, diagnostics, and counseling.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Biology", "Geography"],
+          "IELTS_minimum": 4.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": { "steps": ["Take UNT", "Apply", "Submit documents", "Enroll"] },
+      "international": {
+        "steps": ["Submit passport", "Provide transcripts", "Provide English certificate"]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Moscow Pedagogical University",
+        "University of Warsaw",
+        "Beijing Normal University"
+      ]
+    },
+
+    "comparison": {
+      "city": "Almaty",
+      "ielts_required": "4.5–5.0",
+      "program_count": 4,
+      "strengths": ["Pedagogy", "Languages", "Psychology"]
+    }
+  }
+}

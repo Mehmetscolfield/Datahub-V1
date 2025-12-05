@@ -1,0 +1,112 @@
+{
+  "university": {
+    "id": "taraz",
+    "name": "Taraz Regional University named after M.Kh. Dulati",
+    "city": "Taraz",
+    "founded": 1958,
+    "ranking_kz": 19,
+    "official_website": "https://dulaty.kz",
+    "tuition_range": "700 000 – 1 050 000 ₸",
+    "images": [
+      "https://dulaty.kz/media/campus1.jpg",
+      "https://dulaty.kz/media/campus2.jpg",
+      "https://dulaty.kz/media/students.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/UkC8jXoiYxw",
+
+    "about": {
+      "mission": "To prepare specialists for regional development in engineering, pedagogy, IT, and agriculture.",
+      "history": "One of the largest regional universities of southern Kazakhstan.",
+      "leadership": "Rector: Qurbaniyazov Serik",
+      "achievements": [
+        "Strong engineering programs",
+        "Large campus infrastructure",
+        "Regional innovation projects"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Information Systems",
+        "faculty": "Engineering & IT",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "950 000 ₸",
+        "description": "Programming, database systems, software engineering, and networks.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Civil Engineering",
+        "faculty": "Engineering",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 050 000 ₸",
+        "description": "Covers construction, materials, architecture, and urban planning.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Agronomy",
+        "faculty": "Agriculture",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "850 000 ₸",
+        "description": "Studies soil systems, crop science, and agricultural technology.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Biology", "Chemistry"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "Primary Education",
+        "faculty": "Pedagogy",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "700 000 ₸",
+        "description": "Covers teaching methods, psychology, and childhood education.",
+
+        "requirements": {
+          "UNT_minimum": 50,
+          "UNT_subjects": ["World History", "Reading"],
+          "IELTS_minimum": 4.0
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": { "steps": ["UNT exam", "Apply", "Submit documents", "Enroll"] },
+      "international": {
+        "steps": ["Passport", "Transcripts", "English/Kazakh/Russian certificate"]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "University of Tashkent",
+        "Tomsk Polytechnic University",
+        "University of Lodz"
+      ]
+    },
+
+    "comparison": {
+      "city": "Taraz",
+      "ielts_required": "4.0–5.0",
+      "program_count": 4,
+      "strengths": ["Engineering", "Agriculture", "IT"]
+    }
+  }
+}

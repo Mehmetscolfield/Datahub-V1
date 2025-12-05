@@ -1,0 +1,125 @@
+{
+  "university": {
+    "id": "aitu",
+    "name": "Astana IT University",
+    "city": "Astana",
+    "founded": 2019,
+    "ranking_kz": 7,
+    "official_website": "https://astanait.edu.kz",
+    "tuition_range": "1 300 000 – 1 450 000 ₸",
+    "images": [
+      "https://astanait.edu.kz/images/campus1.jpg",
+      "https://astanait.edu.kz/images/campus2.jpg",
+      "https://astanait.edu.kz/images/hall.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/f2gT3LKvZCw",
+
+    "about": {
+      "mission": "To educate globally competitive IT specialists for Kazakhstan’s digital transformation.",
+      "history": "Founded in 2019 as Kazakhstan's most modern IT-focused university located in Astana Hub.",
+      "leadership": "Rector: Sagadiev Askar",
+      "achievements": [
+        "Located in Astana Hub",
+        "Strong ICT programs",
+        "Fully digital campus",
+        "High industry integration"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Cybersecurity",
+        "faculty": "Faculty of Cybersecurity",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 400 000 ₸",
+        "description": "Focuses on information security, ethical hacking, cryptography, and network protection.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math", "Physics"],
+          "profile_subject_minimum": 20,
+          "IELTS_minimum": 5.5,
+          "alt_english": "Duolingo 90"
+        }
+      },
+
+      {
+        "program": "Artificial Intelligence",
+        "faculty": "IT & AI",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 450 000 ₸",
+        "description": "Covers machine learning, neural networks, data science, and intelligent systems.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Information Technologies",
+        "faculty": "IT",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 350 000 ₸",
+        "description": "Covers software development, databases, cloud systems, and IT infrastructure.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Digital Journalism",
+        "faculty": "Media",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 300 000 ₸",
+        "description": "Teaches digital communication, media technologies, and journalism.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Reading", "World History"],
+          "IELTS_minimum": 5.0
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Take UNT",
+          "Submit online application",
+          "Provide IELTS if applying to English programs"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport",
+          "Provide academic transcripts",
+          "Provide English certificate (IELTS/TOEFL)"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Huawei ICT Academy",
+        "Cisco Networking Academy",
+        "EPAM University Program"
+      ]
+    },
+
+    "comparison": {
+      "city": "Astana",
+      "ielts_required": "5.5",
+      "program_count": 4,
+      "strengths": ["Cybersecurity", "Artificial Intelligence", "Modern campus"]
+    }
+  }
+}

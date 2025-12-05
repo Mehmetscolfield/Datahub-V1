@@ -1,0 +1,102 @@
+{
+  "university": {
+    "id": "abai_lang",
+    "name": "Abylai Khan Kazakh University of International Relations and World Languages",
+    "city": "Almaty",
+    "founded": 1941,
+    "ranking_kz": 12,
+    "official_website": "https://kazumo.kz",
+    "tuition_range": "900 000 – 1 200 000 ₸",
+    "images": [
+      "https://kazumo.kz/media/campus1.jpg",
+      "https://kazumo.kz/media/campus2.jpg",
+      "https://kazumo.kz/media/students.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/JG1yTuQFRJs",
+
+    "about": {
+      "mission": "To prepare multilingual specialists for diplomacy, education, translation, and global communications.",
+      "history": "One of Kazakhstan’s oldest linguistic and international relations universities.",
+      "leadership": "Rector: Kunanbayev Erbolat",
+      "achievements": [
+        "Strong language programs",
+        "Top IR and translation faculty",
+        "Many international partnerships"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Translation Studies (English)",
+        "faculty": "Translation",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 200 000 ₸",
+        "description": "Covers translation, interpretation, linguistics, and cultural studies.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["English", "World History"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "International Relations",
+        "faculty": "IR",
+        "duration": "4 years",
+        "language": "English/Kazakh/Russian",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Covers diplomacy, foreign policy, security studies, and global affairs.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["World History", "History of Kazakhstan"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Foreign Language Education (English)",
+        "faculty": "Education",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "950 000 ₸",
+        "description": "Prepares English teachers for schools and universities.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["English", "World History"],
+          "IELTS_minimum": 5.0
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": ["UNT exam", "Submit application", "Enroll"]
+      },
+      "international": {
+        "steps": [
+          "Submit passport & transcripts",
+          "Provide English certificate (if program taught in English)"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Beijing Language University",
+        "University of Warsaw",
+        "Ankara University"
+      ]
+    },
+
+    "comparison": {
+      "city": "Almaty",
+      "ielts_required": "5.0–5.5",
+      "program_count": 3,
+      "strengths": ["Languages", "Translation", "International Relations"]
+    }
+  }
+}

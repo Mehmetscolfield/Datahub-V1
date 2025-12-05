@@ -1,0 +1,137 @@
+{
+  "university": {
+    "id": "sdu",
+    "name": "SDU University",
+    "city": "Kaskelen, Almaty Region",
+    "founded": 1996,
+    "ranking_kz": 6,
+    "official_website": "https://sdu.edu.kz",
+    "tuition_range": "900 000 – 1 200 000 ₸",
+    "images": [
+      "https://sdu.edu.kz/wp-content/uploads/campus1.jpg",
+      "https://sdu.edu.kz/wp-content/uploads/campus2.jpg",
+      "https://sdu.edu.kz/wp-content/uploads/library.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/76H7vHq9RKg",
+
+    "about": {
+      "mission": "To prepare globally competitive specialists in IT, business, education, and law.",
+      "history": "Founded in 1996, SDU is known for strong IT programs and English-medium instruction.",
+      "leadership": "Rector: Kairat Kussainov",
+      "achievements": [
+        "High UNT entrance scores",
+        "Modern academic environment",
+        "Growing international collaborations"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Computer Science",
+        "faculty": "Engineering and Natural Sciences",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 200 000 ₸",
+        "description": "Covers algorithms, software engineering, web development, and AI.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["Math", "Physics"],
+          "profile_subject_minimum": 20,
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Information Systems",
+        "faculty": "IT",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 150 000 ₸",
+        "description": "Focuses on enterprise technologies, networks, and business IT solutions.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Finance",
+        "faculty": "Business School",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 050 000 ₸",
+        "description": "Covers investment, banking, accounting, and financial analytics.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Geography"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Law",
+        "faculty": "Law",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "950 000 ₸",
+        "description": "Covers civil law, criminal law, contract law, and legal systems.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["History", "Human Rights"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Foreign Language Education",
+        "faculty": "Education",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "900 000 ₸",
+        "description": "Prepares English language teachers for schools and universities.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["English", "World History"],
+          "IELTS_minimum": 5.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Take UNT",
+          "Submit online application",
+          "Provide IELTS if applying to English programs"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport & transcripts",
+          "Provide English certificate"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "University of Warsaw",
+        "Istanbul University",
+        "Middle East Technical University"
+      ]
+    },
+
+    "comparison": {
+      "city": "Kaskelen",
+      "ielts_required": "5.5",
+      "program_count": 5,
+      "strengths": ["IT", "Business", "Education"]
+    }
+  }
+}
