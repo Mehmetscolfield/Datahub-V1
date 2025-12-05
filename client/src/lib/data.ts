@@ -46,7 +46,9 @@ export interface University {
 // Load all JSON files from the data directory
 const modules = import.meta.glob('../data/universities/*.json', { eager: true });
 
-const universities: University[] = Object.values(modules).map((mod: any) => mod.university);
+const universities: University[] = Object.values(modules)
+  .map((mod: any) => mod.university)
+  .filter((u): u is University => !!u);
 
 export function useUniversities() {
   return universities;
