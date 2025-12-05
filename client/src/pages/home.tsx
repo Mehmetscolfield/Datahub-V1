@@ -26,11 +26,11 @@ export default function Home() {
             <div className="group relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 h-[500px] flex flex-col">
               <div className="absolute inset-0 z-0">
                 <img 
-                  src="/images/universities/NU images/NU_Building.jpg" 
+                  src="/images/hero/local-students.jpg" 
                   alt="Local Students" 
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/images/universities/Al-Farabi Kazakh National University/images.jpg";
+                    (e.target as HTMLImageElement).src = "/images/universities/NU images/NU_Building.jpg";
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -59,11 +59,11 @@ export default function Home() {
             <div className="group relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 h-[500px] flex flex-col">
                <div className="absolute inset-0 z-0">
                 <img 
-                  src="/images/universities/Satbayev University/download.jpg" 
+                  src="/images/hero/international-students.jpg" 
                   alt="International Students" 
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/images/universities/KIMEP University/download.jpg";
+                    (e.target as HTMLImageElement).src = "/images/universities/Satbayev University/download.jpg";
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent" />
