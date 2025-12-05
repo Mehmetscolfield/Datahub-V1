@@ -565,6 +565,7 @@ export default function UniversityDetails() {
         {university.accreditations && university.accreditations.length > 0 && (
           <section>
             <h2 className="text-3xl font-bold font-heading mb-8">Accreditations</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Card>
               <CardContent className="pt-6">
                 <ul className="space-y-3">
@@ -577,6 +578,7 @@ export default function UniversityDetails() {
                 </ul>
               </CardContent>
             </Card>
+            </div>
           </section>
         )}
 
