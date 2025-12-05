@@ -8,11 +8,11 @@
     "official_website": "https://kaznu.kz",
     "tuition_range": "900 000 – 1 300 000 ₸",
     "images": [
-      "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000&auto=format&fit=crop",
+      "/images/universities/Al-Farabi Kazakh National University/images.jpg",
       "https://images.unsplash.com/photo-1605627834710-fa5a6e17e3d8?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1000&auto=format&fit=crop"
     ],
-    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
+    "logo": "/images/universities/Al-Farabi Kazakh National University/logo.png",
     "tour_video": "https://www.youtube.com/embed/7lIKhHkJYwg",
 
     "about": {

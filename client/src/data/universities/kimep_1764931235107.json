@@ -8,11 +8,11 @@
     "official_website": "https://kimep.kz",
     "tuition_range": "3 300 000 – 3 500 000 ₸",
     "images": [
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop",
+      "/images/universities/KIMEP University/download.jpg",
       "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1491841573634-28fb1df18d1d?q=80&w=1000&auto=format&fit=crop"
     ],
-    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
+    "logo": "/images/universities/KIMEP University/logo.png",
     "tour_video": "https://www.youtube.com/embed/puQ3ZRUjXgU",
 
     "about": {
