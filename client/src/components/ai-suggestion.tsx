@@ -65,7 +65,7 @@ Only respond with valid JSON, no other text.`;
 
       const response = await fetch(
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" +
-          apiKey,
+          encodeURIComponent(apiKey),
         {
           method: "POST",
           headers: {
@@ -81,39 +81,60 @@ Only respond with valid JSON, no other text.`;
                 ],
               },
             ],
+            generationConfig: {
+              temperature: 0.7,
+              maxOutputTokens: 1024,
+            },
           }),
         }
       );
 
       if (!response.ok) {
         const errorData = await response.json();
-        if (response.status === 400 && errorData.error?.message) {
-          throw new Error(errorData.error.message);
+        console.error("API Error:", errorData);
+        
+        if (response.status === 401) {
+          throw new Error("Invalid API key. Please check your key and try again.");
+        } else if (response.status === 400) {
+          throw new Error(errorData.error?.message || "Invalid request. Please check your input.");
+        } else if (response.status === 429) {
+          throw new Error("Rate limited by Google API. Please wait a moment and try again.");
         }
-        throw new Error("Failed to get suggestions. Please check your API key.");
+        throw new Error(`API Error (${response.status}): Please check your API key and quota.`);
       }
 
       const data = await response.json();
 
-      if (
-        !data.candidates ||
-        !data.candidates[0] ||
-        !data.candidates[0].content ||
-        !data.candidates[0].content.parts ||
-        !data.candidates[0].content.parts[0]
-      ) {
-        throw new Error("Invalid response from AI. Please try again.");
+      if (!data.candidates || !data.candidates[0]) {
+        console.error("No candidates in response:", data);
+        throw new Error("AI returned no suggestions. Please try again with more specific criteria.");
+      }
+
+      if (!data.candidates[0].content?.parts?.[0]?.text) {
+        console.error("Invalid response structure:", data);
+        throw new Error("Could not extract text from AI response.");
       }
 
       const content = data.candidates[0].content.parts[0].text;
+      console.log("AI Response:", content);
 
       // Parse JSON from response
-      const jsonMatch = content.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) {
-        throw new Error("Could not parse AI response. Please try again.");
+      let result: SuggestionResult;
+      try {
+        const jsonMatch = content.match(/\{[\s\S]*\}/);
+        if (!jsonMatch) {
+          throw new Error("No JSON found in response");
+        }
+        result = JSON.parse(jsonMatch[0]);
+      } catch (parseError) {
+        console.error("JSON Parse Error:", parseError);
+        console.error("Response content:", content);
+        throw new Error("Could not parse AI response. The API returned an unexpected format.");
       }
 
-      const result = JSON.parse(jsonMatch[0]) as SuggestionResult;
+      if (!result.universities || !Array.isArray(result.universities)) {
+        throw new Error("Invalid response format: missing universities array");
+      }
 
       // Validate universities exist
       const validUniversities = result.universities.filter((name) =>
@@ -125,7 +146,7 @@ Only respond with valid JSON, no other text.`;
       );
 
       if (validUniversities.length === 0) {
-        throw new Error("No matching universities found. Please try again.");
+        throw new Error("No matching universities found. Please try again with different criteria.");
       }
 
       setSuggestions({
@@ -134,7 +155,8 @@ Only respond with valid JSON, no other text.`;
       });
     } catch (err) {
       const errorMessage =
-        err instanceof Error ? err.message : "An error occurred";
+        err instanceof Error ? err.message : "An unexpected error occurred";
+      console.error("Full error:", err);
       setError(errorMessage);
     } finally {
       setLoading(false);
