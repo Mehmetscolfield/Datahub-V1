@@ -26,11 +26,11 @@ export default function Home() {
             <div className="group relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 h-[500px] flex flex-col">
               <div className="absolute inset-0 z-0">
                 <img 
-                  src="/assets/generated_images/kazakhstan_students_studying_outdoors.png" 
+                  src="/images/universities/NU images/NU_Building.jpg" 
                   alt="Local Students" 
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop";
+                    (e.target as HTMLImageElement).src = "/images/universities/Al-Farabi Kazakh National University/images.jpg";
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -59,11 +59,11 @@ export default function Home() {
             <div className="group relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 border border-slate-100 h-[500px] flex flex-col">
                <div className="absolute inset-0 z-0">
                 <img 
-                  src="/assets/generated_images/international_students_at_airport_or_travel.png" 
+                  src="/images/universities/Satbayev University/download.jpg" 
                   alt="International Students" 
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000&auto=format&fit=crop";
+                    (e.target as HTMLImageElement).src = "/images/universities/KIMEP University/download.jpg";
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent" />
