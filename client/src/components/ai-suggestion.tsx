@@ -39,6 +39,11 @@ export default function AISuggestion() {
     setSuggestions(null);
 
     try {
+      // Validate API key format
+      if (apiKey.length < 10) {
+        throw new Error("API key seems too short. Please check you copied the full key.");
+      }
+
       // Get all university names and basic info
       const universityList = universities
         .map(
@@ -55,85 +60,131 @@ ${userProfile}
 AVAILABLE UNIVERSITIES:
 ${universityList}
 
-Please respond in JSON format like this:
+Please respond ONLY with valid JSON in this exact format:
 {
   "universities": ["University Name 1", "University Name 2", "University Name 3"],
   "reasoning": "Brief explanation of why these universities match the student's profile"
-}
+}`;
 
-Only respond with valid JSON, no other text.`;
-
-      const response = await fetch(
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" +
-          encodeURIComponent(apiKey),
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            contents: [
-              {
-                parts: [
-                  {
-                    text: prompt,
-                  },
-                ],
-              },
-            ],
-            generationConfig: {
-              temperature: 0.7,
-              maxOutputTokens: 1024,
+      // Use the correct API endpoint format
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent`;
+      
+      const response = await fetch(`${apiUrl}?key=${encodeURIComponent(apiKey.trim())}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [
+                {
+                  text: prompt,
+                },
+              ],
             },
-          }),
-        }
-      );
+          ],
+          safetySettings: [
+            {
+              category: "HARM_CATEGORY_HARASSMENT",
+              threshold: "BLOCK_NONE",
+            },
+            {
+              category: "HARM_CATEGORY_HATE_SPEECH",
+              threshold: "BLOCK_NONE",
+            },
+            {
+              category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+              threshold: "BLOCK_NONE",
+            },
+            {
+              category: "HARM_CATEGORY_DANGEROUS_CONTENT",
+              threshold: "BLOCK_NONE",
+            },
+          ],
+          generationConfig: {
+            temperature: 0.1,
+            topP: 0.8,
+            maxOutputTokens: 500,
+          },
+        }),
+      });
+
+      console.log("Response status:", response.status);
+      const responseText = await response.text();
+      console.log("Raw response:", responseText);
 
       if (!response.ok) {
-        const errorData = await response.json();
-        console.error("API Error:", errorData);
+        let errorMessage = `API Error (${response.status})`;
         
-        if (response.status === 401) {
-          throw new Error("Invalid API key. Please check your key and try again.");
-        } else if (response.status === 400) {
-          throw new Error(errorData.error?.message || "Invalid request. Please check your input.");
-        } else if (response.status === 429) {
-          throw new Error("Rate limited by Google API. Please wait a moment and try again.");
+        try {
+          const errorData = JSON.parse(responseText);
+          console.error("API Error Data:", errorData);
+          
+          if (errorData.error?.message) {
+            errorMessage = errorData.error.message;
+          }
+          
+          if (response.status === 401 || response.status === 403) {
+            errorMessage = "Invalid or expired API key. Please get a new key from https://ai.google.dev/";
+          } else if (response.status === 404) {
+            errorMessage = "API endpoint not found. This might be a temporary issue or the model name changed.";
+          } else if (response.status === 429) {
+            errorMessage = "Rate limited. Please wait a few seconds and try again.";
+          } else if (response.status === 500) {
+            errorMessage = "Google API server error. Please try again in a moment.";
+          }
+        } catch (e) {
+          console.error("Could not parse error response:", e);
         }
-        throw new Error(`API Error (${response.status}): Please check your API key and quota.`);
+        
+        throw new Error(errorMessage);
       }
 
-      const data = await response.json();
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch (e) {
+        console.error("JSON Parse error:", e);
+        throw new Error("Invalid JSON response from API. The API may be temporarily unavailable.");
+      }
 
       if (!data.candidates || !data.candidates[0]) {
         console.error("No candidates in response:", data);
-        throw new Error("AI returned no suggestions. Please try again with more specific criteria.");
+        throw new Error("AI returned no suggestions. Please try with more specific preferences.");
       }
 
-      if (!data.candidates[0].content?.parts?.[0]?.text) {
+      const candidate = data.candidates[0];
+      
+      if (candidate.finishReason === "SAFETY") {
+        throw new Error("Request was blocked by safety filters. Please rephrase your university preferences.");
+      }
+
+      if (!candidate.content?.parts?.[0]?.text) {
         console.error("Invalid response structure:", data);
-        throw new Error("Could not extract text from AI response.");
+        throw new Error("Could not extract recommendations from AI response.");
       }
 
-      const content = data.candidates[0].content.parts[0].text;
-      console.log("AI Response:", content);
+      const content = candidate.content.parts[0].text;
+      console.log("AI Response text:", content);
 
       // Parse JSON from response
       let result: SuggestionResult;
       try {
+        // Try to find JSON in the response
         const jsonMatch = content.match(/\{[\s\S]*\}/);
         if (!jsonMatch) {
-          throw new Error("No JSON found in response");
+          throw new Error("No JSON found");
         }
         result = JSON.parse(jsonMatch[0]);
       } catch (parseError) {
         console.error("JSON Parse Error:", parseError);
         console.error("Response content:", content);
-        throw new Error("Could not parse AI response. The API returned an unexpected format.");
+        throw new Error("Could not parse recommendations. Try again with simpler input.");
       }
 
-      if (!result.universities || !Array.isArray(result.universities)) {
-        throw new Error("Invalid response format: missing universities array");
+      if (!result.universities || !Array.isArray(result.universities) || result.universities.length === 0) {
+        throw new Error("Invalid response: no universities in recommendation");
       }
 
       // Validate universities exist
@@ -146,7 +197,12 @@ Only respond with valid JSON, no other text.`;
       );
 
       if (validUniversities.length === 0) {
-        throw new Error("No matching universities found. Please try again with different criteria.");
+        // If no exact matches, show the response anyway
+        setSuggestions({
+          universities: result.universities.slice(0, 5),
+          reasoning: result.reasoning || "Based on your profile preferences",
+        });
+        return;
       }
 
       setSuggestions({
