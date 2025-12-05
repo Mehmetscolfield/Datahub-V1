@@ -8,11 +8,11 @@
     "official_website": "https://buketov.edu.kz",
     "tuition_range": "850 000 – 1 150 000 ₸",
     "images": [
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1491841573634-28fb1df18d1d?q=80&w=1000&auto=format&fit=crop"
+      "/images/universities/Karaganda Buketov University/images.jpg",
+      "/images/universities/Karaganda Buketov University/download.jpg",
+      "/images/universities/Karaganda Buketov University/logo.jpg"
     ],
-    "logo": "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=200&auto=format&fit=crop",
+    "logo": "/images/universities/Karaganda Buketov University/logo.jpg",
     "tour_video": "https://www.youtube.com/embed/OC1O_E1Ed0g",
 
     "about": {

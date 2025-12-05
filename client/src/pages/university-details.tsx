@@ -177,14 +177,12 @@ export default function UniversityDetails() {
                 className="border-0"
               />
             </div>
-             {/* Gallery Preview */}
-             {university.images && university.images.length > 1 && (
-               <div className="grid grid-cols-4 gap-4 mt-4">
-                  {university.images.slice(1, 5).map((img, i) => (
-                    <div key={i} className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity">
-                      <img src={img} alt="Campus" className="w-full h-full object-cover" />
-                    </div>
-                  ))}
+             {/* Gallery Preview: show a single campus image to avoid broken icons */}
+             {university.images && university.images.length > 0 && (
+               <div className="mt-4">
+                 <div className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity max-w-3xl">
+                   <img src={university.images[1] ?? university.images[0]} alt="Campus" className="w-full h-full object-cover" />
+                 </div>
                </div>
              )}
           </section>

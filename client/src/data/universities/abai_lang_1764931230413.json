@@ -8,11 +8,11 @@
     "official_website": "https://kazumo.kz",
     "tuition_range": "900 000 – 1 200 000 ₸",
     "images": [
-      "https://images.unsplash.com/photo-1567427202341-550ee7b72f36?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1541539227805-cb42ed2fd25b?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1491841573634-28fb1df18d1d?q=80&w=1000&auto=format&fit=crop"
+      "/images/universities/Abylai Khan Kazakh University of International Relations and World/images.jpg",
+      "/images/universities/Abylai Khan Kazakh University of International Relations and World/download.jpg",
+      "/images/universities/Abylai Khan Kazakh University of International Relations and World/logo.jpg"
     ],
-    "logo": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=200&auto=format&fit=crop",
+    "logo": "/images/universities/Abylai Khan Kazakh University of International Relations and World/logo.jpg",
     "tour_video": "https://www.youtube.com/embed/JG1yTuQFRJs",
 
     "about": {

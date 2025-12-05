@@ -8,11 +8,11 @@
     "official_website": "https://auezov.edu.kz",
     "tuition_range": "850 000 – 1 200 000 ₸",
     "images": [
-      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1541539227805-cb42ed2fd25b?q=80&w=1000&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?q=80&w=1000&auto=format&fit=crop"
+      "/images/universities/Auezov South Kazakhstan University/images.jpg",
+      "/images/universities/Auezov South Kazakhstan University/download.jpg",
+      "/images/universities/Auezov South Kazakhstan University/logo.jpg"
     ],
-    "logo": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?q=80&w=200&auto=format&fit=crop",
+    "logo": "/images/universities/Auezov South Kazakhstan University/logo.jpg",
     "tour_video": "https://www.youtube.com/embed/-5benpVxw20",
 
     "about": {
