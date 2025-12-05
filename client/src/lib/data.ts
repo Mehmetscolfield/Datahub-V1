@@ -25,6 +25,7 @@ export interface University {
   official_website?: string;
   tuition_range?: string;
   images?: string[];
+  logo?: string;
   tour_video?: string;
   about?: {
     mission?: string;

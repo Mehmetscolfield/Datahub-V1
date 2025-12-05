@@ -13,15 +13,29 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { MapPin, Globe, Trophy, Heart, Play, Calendar, DollarSign, CheckCircle } from "lucide-react";
+import { MapPin, Globe, Trophy, Heart, Play, Calendar, CheckCircle } from "lucide-react";
 import { useCompare } from "@/lib/compare-context";
 import { useFavorites } from "@/lib/favorites-context";
+import { useI18n } from "@/lib/i18n";
+
+// Mock function to get a logo if not present (for demo)
+function getLogo(id: string) {
+  // Deterministic logo selection based on ID length/char
+  const logos = [
+    "/assets/generated_images/academic_university_logo_crest_blue.png",
+    "/assets/generated_images/academic_university_logo_crest_red.png",
+    "/assets/generated_images/academic_university_logo_crest_green.png"
+  ];
+  const index = id.length % logos.length;
+  return logos[index];
+}
 
 export default function UniversityDetails() {
   const [, params] = useRoute("/university/:id");
   const university = useUniversity(params?.id || "");
   const { isInCompare, addToCompare, removeFromCompare } = useCompare();
   const { isFavorite, toggleFavorite } = useFavorites();
+  const { t } = useI18n();
 
   if (!university) {
     return <Layout><div className="p-8 text-center">University not found</div></Layout>;
@@ -29,6 +43,7 @@ export default function UniversityDetails() {
 
   const isCompared = isInCompare(university.id);
   const isFav = isFavorite(university.id);
+  const logo = university.logo || getLogo(university.id);
   
   const mainImage = university.images && university.images.length > 0 
     ? university.images[0] 
@@ -46,35 +61,43 @@ export default function UniversityDetails() {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 container mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div className="space-y-4 text-white">
-              <div className="flex flex-wrap gap-3">
-                 {university.ranking_kz && (
-                  <Badge className="bg-yellow-500 hover:bg-yellow-600 text-black border-0">
-                    <Trophy className="w-3 h-3 mr-1" />
-                    #{university.ranking_kz} in Kazakhstan
-                  </Badge>
-                )}
-                <Badge variant="outline" className="text-white border-white/30 backdrop-blur-md">
-                   <MapPin className="w-3 h-3 mr-1" />
-                   {university.city}
-                </Badge>
+            <div className="flex items-end gap-6">
+              {/* Logo */}
+              <div className="hidden md:block h-32 w-32 rounded-xl bg-white p-2 shadow-lg shrink-0">
+                <img src={logo} alt={`${university.name} Logo`} className="h-full w-full object-contain" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold leading-tight">{university.name}</h1>
-              <div className="flex items-center gap-4 text-slate-300">
-                <span>Founded {university.founded}</span>
-                <span>•</span>
-                <a href={university.official_website} target="_blank" rel="noreferrer" className="flex items-center hover:text-white hover:underline">
-                  <Globe className="w-4 h-4 mr-1" />
-                  Official Website
-                </a>
+              
+              <div className="space-y-4 text-white">
+                <div className="flex flex-wrap gap-3">
+                   {university.ranking_kz && (
+                    <Badge className="bg-yellow-500 hover:bg-yellow-600 text-black border-0">
+                      <Trophy className="w-3 h-3 mr-1" />
+                      #{university.ranking_kz} in Kazakhstan
+                    </Badge>
+                  )}
+                  <Badge variant="outline" className="text-white border-white/30 backdrop-blur-md">
+                     <MapPin className="w-3 h-3 mr-1" />
+                     {university.city}
+                  </Badge>
+                </div>
+                <h1 className="text-3xl md:text-5xl font-heading font-bold leading-tight drop-shadow-md">{university.name}</h1>
+                <div className="flex items-center gap-4 text-slate-200 font-medium">
+                  <span>{t('details.founded')} {university.founded}</span>
+                  <span>•</span>
+                  <a href={university.official_website} target="_blank" rel="noreferrer" className="flex items-center hover:text-white hover:underline transition-colors">
+                    <Globe className="w-4 h-4 mr-1" />
+                    {t('details.official_site')}
+                  </a>
+                </div>
               </div>
             </div>
+
             <div className="flex gap-3">
                <Button 
                 variant={isCompared ? "destructive" : "secondary"} 
                 onClick={() => isCompared ? removeFromCompare(university.id) : addToCompare(university)}
               >
-                 {isCompared ? "Remove from Compare" : "Compare University"}
+                 {isCompared ? t('details.remove_compare') : t('details.compare')}
                </Button>
                <Button 
                   variant="outline" 
@@ -82,7 +105,7 @@ export default function UniversityDetails() {
                   onClick={() => toggleFavorite(university.id)}
                >
                  <Heart className={`w-4 h-4 mr-2 ${isFav ? 'fill-current' : ''}`} />
-                 {isFav ? "Saved" : "Save"}
+                 {isFav ? t('details.saved') : t('details.save')}
                </Button>
             </div>
           </div>
@@ -94,7 +117,7 @@ export default function UniversityDetails() {
         {/* About Section */}
         <section className="grid md:grid-cols-3 gap-12">
           <div className="md:col-span-2 space-y-6">
-            <h2 className="text-3xl font-bold font-heading">About the University</h2>
+            <h2 className="text-3xl font-bold font-heading text-foreground">{t('details.about')}</h2>
             <div className="prose max-w-none text-muted-foreground">
               <p className="text-lg text-foreground font-medium">{university.about?.mission}</p>
               <p>{university.about?.history}</p>
@@ -102,7 +125,7 @@ export default function UniversityDetails() {
             
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
               {university.about?.achievements?.map((ach, i) => (
-                <div key={i} className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                <div key={i} className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
                   <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <span className="text-sm font-medium">{ach}</span>
                 </div>
@@ -113,23 +136,23 @@ export default function UniversityDetails() {
           <div className="space-y-6">
              <Card>
                <CardHeader>
-                 <CardTitle className="text-lg">Quick Facts</CardTitle>
+                 <CardTitle className="text-lg">{t('details.facts')}</CardTitle>
                </CardHeader>
                <CardContent className="space-y-4">
                  <div className="flex justify-between py-2 border-b">
-                   <span className="text-muted-foreground">Location</span>
+                   <span className="text-muted-foreground">{t('details.location')}</span>
                    <span className="font-medium">{university.city}</span>
                  </div>
                  <div className="flex justify-between py-2 border-b">
-                   <span className="text-muted-foreground">Founded</span>
+                   <span className="text-muted-foreground">{t('details.founded')}</span>
                    <span className="font-medium">{university.founded}</span>
                  </div>
                  <div className="flex justify-between py-2 border-b">
-                   <span className="text-muted-foreground">Tuition Range</span>
+                   <span className="text-muted-foreground">{t('details.tuition')}</span>
                    <span className="font-medium text-primary">{university.tuition_range}</span>
                  </div>
                  <div className="flex justify-between py-2 border-b">
-                   <span className="text-muted-foreground">Programs</span>
+                   <span className="text-muted-foreground">{t('details.programs_count')}</span>
                    <span className="font-medium">{university.programs?.length || 0}+</span>
                  </div>
                </CardContent>
@@ -142,7 +165,7 @@ export default function UniversityDetails() {
           <section>
             <h2 className="text-2xl font-bold font-heading mb-6 flex items-center gap-2">
               <Play className="w-6 h-6 text-primary" />
-              Virtual Tour
+              {t('details.tour')}
             </h2>
             <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black shadow-lg">
               <iframe
@@ -169,17 +192,16 @@ export default function UniversityDetails() {
 
         {/* Programs */}
         <section>
-          <h2 className="text-3xl font-bold font-heading mb-8">Academic Programs</h2>
+          <h2 className="text-3xl font-bold font-heading mb-8">{t('details.programs')}</h2>
           <div className="rounded-xl border shadow-sm overflow-hidden">
             <Table>
-              <TableHeader className="bg-slate-50">
+              <TableHeader className="bg-slate-50 dark:bg-slate-900">
                 <TableRow>
-                  <TableHead className="w-[30%]">Program</TableHead>
-                  <TableHead>Faculty</TableHead>
-                  <TableHead>Duration</TableHead>
-                  <TableHead>Language</TableHead>
-                  <TableHead className="text-right">Tuition/Year</TableHead>
-                  <TableHead className="text-right">Action</TableHead>
+                  <TableHead className="w-[35%]">{t('program.program')}</TableHead>
+                  <TableHead>{t('program.faculty')}</TableHead>
+                  <TableHead>{t('program.duration')}</TableHead>
+                  <TableHead>{t('program.language')}</TableHead>
+                  <TableHead className="text-right">{t('program.tuition')}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -193,9 +215,6 @@ export default function UniversityDetails() {
                     <TableCell>{prog.duration}</TableCell>
                     <TableCell>{prog.language}</TableCell>
                     <TableCell className="text-right font-medium text-primary">{prog.tuition_fee_year}</TableCell>
-                    <TableCell className="text-right">
-                      <Button variant="ghost" size="sm">Details</Button>
-                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -205,11 +224,11 @@ export default function UniversityDetails() {
 
         {/* Admission */}
         <section>
-           <h2 className="text-3xl font-bold font-heading mb-8">Admission & Enrollment</h2>
+           <h2 className="text-3xl font-bold font-heading mb-8">{t('details.admission')}</h2>
            <Tabs defaultValue="local" className="w-full">
             <TabsList className="grid w-full grid-cols-2 max-w-[400px] mb-8">
-              <TabsTrigger value="local">Local Students</TabsTrigger>
-              <TabsTrigger value="international">International Students</TabsTrigger>
+              <TabsTrigger value="local">{t('adm.local')}</TabsTrigger>
+              <TabsTrigger value="international">{t('adm.intl')}</TabsTrigger>
             </TabsList>
             
             <TabsContent value="local" className="space-y-6">
@@ -218,7 +237,7 @@ export default function UniversityDetails() {
                    <CardHeader>
                      <CardTitle className="flex items-center gap-2">
                        <CheckCircle className="w-5 h-5 text-green-500" />
-                       Steps to Apply
+                       {t('adm.steps')}
                      </CardTitle>
                    </CardHeader>
                    <CardContent>
@@ -239,12 +258,12 @@ export default function UniversityDetails() {
                    <CardHeader>
                      <CardTitle className="flex items-center gap-2">
                        <Calendar className="w-5 h-5 text-blue-500" />
-                       Deadlines & Requirements
+                       {t('adm.deadlines')}
                      </CardTitle>
                    </CardHeader>
                    <CardContent className="space-y-4">
                      <p className="text-sm text-muted-foreground">Standard UNT deadlines apply for state grants.</p>
-                     <div className="p-4 bg-amber-50 rounded-lg border border-amber-100 text-amber-900 text-sm">
+                     <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-100 dark:border-amber-900/50 text-amber-900 dark:text-amber-100 text-sm">
                        <strong>Note:</strong> Check specific program requirements for profile subjects.
                      </div>
                    </CardContent>
@@ -258,14 +277,14 @@ export default function UniversityDetails() {
                    <CardHeader>
                      <CardTitle className="flex items-center gap-2">
                        <Globe className="w-5 h-5 text-indigo-500" />
-                       International Application
+                       {t('adm.intl_app')}
                      </CardTitle>
                    </CardHeader>
                    <CardContent>
                      <ul className="space-y-3">
                        {university.admission_and_enrollment?.international?.steps?.map((step: string, i: number) => (
                          <li key={i} className="flex items-start gap-3">
-                           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">
+                           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-xs font-bold text-indigo-600 dark:text-indigo-400">
                              {i + 1}
                            </span>
                            <span>{step}</span>
@@ -281,11 +300,11 @@ export default function UniversityDetails() {
 
         {/* Partners */}
         {university.international_cooperation?.partners && (
-           <section className="bg-slate-900 text-white rounded-2xl p-8 md:p-12">
-             <h2 className="text-2xl font-bold font-heading mb-8 text-center">International Partners</h2>
+           <section className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 mb-20">
+             <h2 className="text-2xl font-bold font-heading mb-8 text-center">{t('details.partners')}</h2>
              <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-center opacity-80">
                 {university.international_cooperation.partners.map((partner: string, i: number) => (
-                  <div key={i} className="px-6 py-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors">
+                  <div key={i} className="px-6 py-4 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors cursor-default">
                     <span className="font-medium text-lg">{partner}</span>
                   </div>
                 ))}
