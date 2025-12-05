@@ -38,7 +38,7 @@ export default function UniversityDetails() {
   const { t } = useI18n();
 
   if (!university) {
-    return <Layout><div className="p-8 text-center">University not found</div></Layout>;
+    return <Layout><div className="p-8 text-center">{t('not_found')}</div></Layout>;
   }
 
   const isCompared = isInCompare(university.id);
@@ -72,7 +72,7 @@ export default function UniversityDetails() {
                    {university.ranking_kz && (
                     <Badge className="bg-yellow-500 hover:bg-yellow-600 text-black border-0">
                       <Trophy className="w-3 h-3 mr-1" />
-                      #{university.ranking_kz} in Kazakhstan
+                      #{university.ranking_kz} {t('hero.ranking')}
                     </Badge>
                   )}
                   <Badge variant="outline" className="text-white border-white/30 backdrop-blur-md">
@@ -191,7 +191,7 @@ export default function UniversityDetails() {
                <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
                  <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
                    <Globe className="w-5 h-5 text-primary" />
-                   3D Campus Tour
+                   {t('3d.title')}
                  </h3>
                  <a 
                    href={university.tour_3d} 
@@ -200,7 +200,7 @@ export default function UniversityDetails() {
                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
                  >
                    <Globe className="w-4 h-4" />
-                   Explore 3D Campus
+                   {t('3d.button')}
                  </a>
                </div>
              )}
@@ -279,9 +279,9 @@ export default function UniversityDetails() {
                      </CardTitle>
                    </CardHeader>
                    <CardContent className="space-y-4">
-                     <p className="text-sm text-muted-foreground">Standard UNT deadlines apply for state grants.</p>
+                     <p className="text-sm text-muted-foreground">{t('adm.standard_deadlines')}</p>
                      <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-100 dark:border-amber-900/50 text-amber-900 dark:text-amber-100 text-sm">
-                       <strong>Note:</strong> Check specific program requirements for profile subjects.
+                       {t('adm.profile_note')}
                      </div>
                    </CardContent>
                  </Card>
@@ -318,18 +318,18 @@ export default function UniversityDetails() {
         {/* Campus Life */}
         {university.campus_life && (
           <section>
-            <h2 className="text-3xl font-bold font-heading mb-8">Campus Life</h2>
+            <h2 className="text-3xl font-bold font-heading mb-8">{t('campus.title')}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {university.campus_life.student_population && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Student Population</CardTitle>
+                    <CardTitle className="text-lg">{t('campus.student_population')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold text-primary">{university.campus_life.student_population.toLocaleString()}</div>
                     {university.campus_life.international_students && (
                       <div className="text-sm text-muted-foreground mt-2">
-                        {university.campus_life.international_students.toLocaleString()} international students
+                        {university.campus_life.international_students.toLocaleString()} {t('campus.students')}
                       </div>
                     )}
                   </CardContent>
@@ -339,11 +339,11 @@ export default function UniversityDetails() {
               {university.campus_life.campus_size_hectares && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Campus Size</CardTitle>
+                    <CardTitle className="text-lg">{t('campus.campus_size')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold text-primary">{university.campus_life.campus_size_hectares}</div>
-                    <div className="text-sm text-muted-foreground">hectares</div>
+                    <div className="text-sm text-muted-foreground">{t('campus.hectares')}</div>
                   </CardContent>
                 </Card>
               )}
@@ -351,11 +351,11 @@ export default function UniversityDetails() {
               {university.campus_life.libraries && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Libraries</CardTitle>
+                    <CardTitle className="text-lg">{t('campus.libraries')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold text-primary">{university.campus_life.libraries}</div>
-                    <div className="text-sm text-muted-foreground">on campus</div>
+                    <div className="text-sm text-muted-foreground">{t('campus.on_campus')}</div>
                   </CardContent>
                 </Card>
               )}
@@ -365,7 +365,7 @@ export default function UniversityDetails() {
               {university.campus_life.sports_facilities && university.campus_life.sports_facilities.length > 0 && (
                 <Card>
                   <CardHeader>
-                    <CardTitle>Sports & Recreation</CardTitle>
+                    <CardTitle>{t('campus.sports')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
@@ -383,7 +383,7 @@ export default function UniversityDetails() {
               {university.campus_life.clubs_societies && university.campus_life.clubs_societies.length > 0 && (
                 <Card>
                   <CardHeader>
-                    <CardTitle>Clubs & Societies</CardTitle>
+                    <CardTitle>{t('campus.clubs')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
@@ -402,22 +402,22 @@ export default function UniversityDetails() {
             {university.campus_life.accommodation && (
               <Card className="mt-8">
                 <CardHeader>
-                  <CardTitle>Accommodation</CardTitle>
+                  <CardTitle>{t('campus.accommodation')}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <div className="text-sm text-muted-foreground">Type</div>
+                    <div className="text-sm text-muted-foreground">{t('campus.accommodation_type')}</div>
                     <div className="font-medium">{university.campus_life.accommodation.type}</div>
                   </div>
                   {university.campus_life.accommodation.capacity && (
                     <div>
-                      <div className="text-sm text-muted-foreground">Capacity</div>
-                      <div className="font-medium">{university.campus_life.accommodation.capacity.toLocaleString()} students</div>
+                      <div className="text-sm text-muted-foreground">{t('campus.accommodation_capacity')}</div>
+                      <div className="font-medium">{university.campus_life.accommodation.capacity.toLocaleString()} {t('campus.students')}</div>
                     </div>
                   )}
                   {university.campus_life.accommodation.cost_per_month && (
                     <div>
-                      <div className="text-sm text-muted-foreground">Monthly Cost</div>
+                      <div className="text-sm text-muted-foreground">{t('campus.accommodation_cost')}</div>
                       <div className="font-medium">{university.campus_life.accommodation.cost_per_month}</div>
                     </div>
                   )}
@@ -430,12 +430,12 @@ export default function UniversityDetails() {
         {/* Scholarships & Financial Aid */}
         {university.scholarships_and_financial_aid && (
           <section>
-            <h2 className="text-3xl font-bold font-heading mb-8">Scholarships & Financial Aid</h2>
+            <h2 className="text-3xl font-bold font-heading mb-8">{t('scholarships.title')}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {university.scholarships_and_financial_aid.state_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">State Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.state_grants')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.state_grants}</p>
@@ -446,7 +446,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.merit_scholarships && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Merit Scholarships</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.merit')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.merit_scholarships}</p>
@@ -457,7 +457,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.need_based_aid && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Need-Based Aid</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.need_based')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.need_based_aid}</p>
@@ -468,7 +468,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.international_scholarships && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">International Scholarships</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.international')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.international_scholarships}</p>
@@ -479,7 +479,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.industry_sponsorships && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Industry Sponsorships</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.industry')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.industry_sponsorships}</p>
@@ -490,7 +490,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.corporate_sponsorships && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Corporate Sponsorships</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.corporate')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.corporate_sponsorships}</p>
@@ -501,7 +501,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.research_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Research Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.research')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.research_grants}</p>
@@ -512,7 +512,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.agricultural_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Agricultural Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.agricultural')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.agricultural_grants}</p>
@@ -523,7 +523,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.teacher_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Teacher Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.teacher')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.teacher_grants}</p>
@@ -534,7 +534,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.energy_sector_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Energy Sector Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.energy')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.energy_sector_grants}</p>
@@ -545,7 +545,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.internship_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Internship Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.internship')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.internship_grants}</p>
@@ -556,7 +556,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.language_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Language Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.language')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.language_grants}</p>
@@ -567,7 +567,7 @@ export default function UniversityDetails() {
               {university.scholarships_and_financial_aid.regional_grants && (
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-lg">Regional Grants</CardTitle>
+                    <CardTitle className="text-lg">{t('scholarships.regional')}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p>{university.scholarships_and_financial_aid.regional_grants}</p>
@@ -581,7 +581,7 @@ export default function UniversityDetails() {
         {/* Accreditations */}
         {university.accreditations && university.accreditations.length > 0 && (
           <section>
-            <h2 className="text-3xl font-bold font-heading mb-8">Accreditations</h2>
+            <h2 className="text-3xl font-bold font-heading mb-8">{t('accreditations.title')}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Card>
               <CardContent className="pt-6">

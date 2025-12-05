@@ -20,10 +20,10 @@ export default function Home() {
         <section className="relative py-12 md:py-24 lg:py-32 px-4 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4 max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-heading font-extrabold tracking-tight text-foreground">
-              Discover Your Future in <span className="text-primary">Kazakhstan</span>
+              {t('home.discover')}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
-              The most comprehensive guide to universities, programs, and scholarships for local and international students.
+              {t('home.comprehensive')}
             </p>
           </div>
 

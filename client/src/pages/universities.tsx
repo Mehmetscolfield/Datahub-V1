@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout";
 import { UniversityCard } from "@/components/university-card";
 import { FilterSidebar, FiltersState } from "@/components/filter-sidebar";
 import { useUniversities } from "@/lib/data";
+import { useI18n } from "@/lib/i18n";
 import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ import {
 
 export default function Universities() {
   const allUniversities = useUniversities();
+  const { t } = useI18n();
   const [location] = useLocation();
   const queryParams = new URLSearchParams(window.location.search);
   const mode = queryParams.get("mode"); // 'local' or 'international'
@@ -134,10 +136,10 @@ export default function Universities() {
       <div className="bg-slate-50 border-b py-8">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold font-heading text-foreground">
-            {mode === 'international' ? 'International Programs' : 'Universities in Kazakhstan'}
+            {mode === 'international' ? t('pages.intl_programs') : t('pages.unis_kazakhstan')}
           </h1>
           <p className="text-muted-foreground mt-2">
-            Found {filteredUniversities.length} universities matching your criteria
+            {t('pages.found_unis').replace('{count}', filteredUniversities.length.toString())}
           </p>
         </div>
       </div>
@@ -157,27 +159,27 @@ export default function Universities() {
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden w-full sm:w-auto">
                     <SlidersHorizontal className="mr-2 h-4 w-4" />
-                    Filters
+                    {t('pages.filters')}
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="w-[300px] overflow-y-auto">
                    <div className="py-4">
-                     <h3 className="font-bold text-lg mb-4">Filters</h3>
+                     <h3 className="font-bold text-lg mb-4">{t('pages.filters')}</h3>
                      <FilterSidebar filters={filters} setFilters={setFilters} />
                    </div>
                 </SheetContent>
               </Sheet>
 
               <div className="flex items-center gap-2 w-full sm:w-auto">
-                <span className="text-sm text-muted-foreground whitespace-nowrap hidden sm:inline">Sort by:</span>
+                <span className="text-sm text-muted-foreground whitespace-nowrap hidden sm:inline">{t('pages.sort_by')}:</span>
                 <Select value={sortBy} onValueChange={setSortBy}>
                   <SelectTrigger className="w-full sm:w-[180px] bg-white">
-                    <SelectValue placeholder="Sort by" />
+                    <SelectValue placeholder={t('pages.sort_by')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ranking">Ranking (High to Low)</SelectItem>
-                    <SelectItem value="tuition_asc">Tuition (Low to High)</SelectItem>
-                    <SelectItem value="tuition_desc">Tuition (High to Low)</SelectItem>
+                    <SelectItem value="ranking">{t('pages.ranking_high_to_low')}</SelectItem>
+                    <SelectItem value="tuition_asc">{t('pages.tuition_low_to_high')}</SelectItem>
+                    <SelectItem value="tuition_desc">{t('pages.tuition_high_to_low')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

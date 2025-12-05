@@ -74,7 +74,7 @@ export function UniversityCard({ university }: UniversityCardProps) {
       <CardContent className="p-4 pt-2 flex-1">
         <div className="mb-4">
           <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">Tuition / Year</div>
-          <div className="font-semibold text-primary">{university.tuition_range || "Check details"}</div>
+          <div className="font-semibold text-primary">{university.tuition_range || t('card.check_details')}</div>
         </div>
 
         <div className="flex flex-wrap gap-1.5">
