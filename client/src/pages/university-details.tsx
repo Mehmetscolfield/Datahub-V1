@@ -185,6 +185,25 @@ export default function UniversityDetails() {
                  </div>
                </div>
              )}
+
+             {/* 3D Tour Link */}
+             {university.tour_3d && (
+               <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+                 <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                   <Globe className="w-5 h-5 text-primary" />
+                   3D Campus Tour
+                 </h3>
+                 <a 
+                   href={university.tour_3d} 
+                   target="_blank" 
+                   rel="noreferrer"
+                   className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                 >
+                   <Globe className="w-4 h-4" />
+                   Explore 3D Campus
+                 </a>
+               </div>
+             )}
           </section>
         )}
 
