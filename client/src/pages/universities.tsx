@@ -26,7 +26,7 @@ export default function Universities() {
     regions: [],
     cities: [],
     programs: [],
-    languages: mode === 'international' ? ['English'] : [],
+    languages: [],
     tuitionMax: 5000000,
     minIelts: 0,
     minUnt: 0,
@@ -77,9 +77,10 @@ export default function Universities() {
           return matchProg && matchLang;
         });
         
-        // Check if the university itself matches language criteria (some unis are fully English)
-        // But strictly we check programs.
-        if (!hasMatchingProgram) return false;
+        // Only filter if both programs AND languages are specified
+        if (filters.programs.length > 0 && filters.languages.length > 0 && !hasMatchingProgram) {
+          return false;
+        }
       }
 
 

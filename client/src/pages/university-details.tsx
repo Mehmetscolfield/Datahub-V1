@@ -298,8 +298,289 @@ export default function UniversityDetails() {
           </Tabs>
         </section>
 
-        {/* Partners */}
-        {university.international_cooperation?.partners && (
+        {/* Campus Life */}
+        {university.campus_life && (
+          <section>
+            <h2 className="text-3xl font-bold font-heading mb-8">Campus Life</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {university.campus_life.student_population && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Student Population</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-primary">{university.campus_life.student_population.toLocaleString()}</div>
+                    {university.campus_life.international_students && (
+                      <div className="text-sm text-muted-foreground mt-2">
+                        {university.campus_life.international_students.toLocaleString()} international students
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+              
+              {university.campus_life.campus_size_hectares && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Campus Size</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-primary">{university.campus_life.campus_size_hectares}</div>
+                    <div className="text-sm text-muted-foreground">hectares</div>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.campus_life.libraries && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Libraries</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-primary">{university.campus_life.libraries}</div>
+                    <div className="text-sm text-muted-foreground">on campus</div>
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {university.campus_life.sports_facilities && university.campus_life.sports_facilities.length > 0 && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Sports & Recreation</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {university.campus_life.sports_facilities.map((facility: string, i: number) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-primary mt-1">•</span>
+                          <span>{facility}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.campus_life.clubs_societies && university.campus_life.clubs_societies.length > 0 && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Clubs & Societies</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {university.campus_life.clubs_societies.map((club: string, i: number) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-primary mt-1">•</span>
+                          <span>{club}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+
+            {university.campus_life.accommodation && (
+              <Card className="mt-8">
+                <CardHeader>
+                  <CardTitle>Accommodation</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <div className="text-sm text-muted-foreground">Type</div>
+                    <div className="font-medium">{university.campus_life.accommodation.type}</div>
+                  </div>
+                  {university.campus_life.accommodation.capacity && (
+                    <div>
+                      <div className="text-sm text-muted-foreground">Capacity</div>
+                      <div className="font-medium">{university.campus_life.accommodation.capacity.toLocaleString()} students</div>
+                    </div>
+                  )}
+                  {university.campus_life.accommodation.cost_per_month && (
+                    <div>
+                      <div className="text-sm text-muted-foreground">Monthly Cost</div>
+                      <div className="font-medium">{university.campus_life.accommodation.cost_per_month}</div>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            )}
+          </section>
+        )}
+
+        {/* Scholarships & Financial Aid */}
+        {university.scholarships_and_financial_aid && (
+          <section>
+            <h2 className="text-3xl font-bold font-heading mb-8">Scholarships & Financial Aid</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {university.scholarships_and_financial_aid.state_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">State Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.state_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.merit_scholarships && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Merit Scholarships</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.merit_scholarships}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.need_based_aid && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Need-Based Aid</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.need_based_aid}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.international_scholarships && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">International Scholarships</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.international_scholarships}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.industry_sponsorships && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Industry Sponsorships</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.industry_sponsorships}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.corporate_sponsorships && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Corporate Sponsorships</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.corporate_sponsorships}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.research_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Research Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.research_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.agricultural_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Agricultural Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.agricultural_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.teacher_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Teacher Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.teacher_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.energy_sector_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Energy Sector Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.energy_sector_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.internship_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Internship Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.internship_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.language_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Language Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.language_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {university.scholarships_and_financial_aid.regional_grants && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Regional Grants</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{university.scholarships_and_financial_aid.regional_grants}</p>
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+          </section>
+        )}
+
+        {/* Accreditations */}
+        {university.accreditations && university.accreditations.length > 0 && (
+          <section>
+            <h2 className="text-3xl font-bold font-heading mb-8">Accreditations</h2>
+            <Card>
+              <CardContent className="pt-6">
+                <ul className="space-y-3">
+                  {university.accreditations.map((accred: string, i: number) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                      <span>{accred}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </section>
+        )}
+
+        
            <section className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 mb-20">
              <h2 className="text-2xl font-bold font-heading mb-8 text-center">{t('details.partners')}</h2>
              <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-center opacity-80">
