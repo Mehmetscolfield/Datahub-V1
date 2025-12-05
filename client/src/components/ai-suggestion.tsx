@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, Sparkles, AlertCircle, ChevronDown, ChevronUp } from "lucide-react";
-import { useI18n } from "@/lib/i18n";
 import { useUniversities } from "@/lib/data";
 
 interface SuggestionResult {
@@ -25,12 +25,12 @@ export default function AISuggestion() {
 
   const handleSuggest = async () => {
     if (!apiKey.trim()) {
-      setError("Please enter your Google Gemini API key");
+      setError(t('ai.please_enter_key'));
       return;
     }
 
     if (!userProfile.trim()) {
-      setError("Please tell us about yourself (GPA, preferences, etc.)");
+      setError(t('ai.please_tell_about'));
       return;
     }
 
@@ -259,7 +259,7 @@ Please respond ONLY with valid JSON in this exact format:
       {isExpanded && (
         <div className="mt-4 space-y-6 p-6 rounded-lg bg-gradient-to-b from-slate-50 to-white border border-slate-200 shadow-lg">
           <p className="text-muted-foreground">
-            Share your profile and get AI-powered university recommendations based on your GPA, interests, and preferences.
+            {t('ai.share_profile')}
           </p>
 
           {/* Main Input Area */}
@@ -268,16 +268,16 @@ Please respond ONLY with valid JSON in this exact format:
             <div className="md:col-span-2 space-y-4">
               <div>
                 <label className="block text-sm font-semibold mb-2 text-foreground">
-                  Tell Us About Yourself
+                  {t('ai.tell_us_about')}
                 </label>
                 <Textarea
-                  placeholder="Example: I have a 4.0 GPA and I'm interested in computer science. I prefer universities with high international rankings and good campus life. I want a university in a capital city."
+                  placeholder={t('ai.placeholder_profile')}
                   value={userProfile}
                   onChange={(e) => setUserProfile(e.target.value)}
                   className="min-h-32 resize-none"
                 />
                 <p className="text-xs text-muted-foreground mt-2">
-                  Include your GPA, field of interest, ranking preferences, location, and any other relevant details.
+                  {t('ai.include_details')}
                 </p>
               </div>
 
@@ -285,23 +285,14 @@ Please respond ONLY with valid JSON in this exact format:
               <div className="space-y-3 bg-blue-50 p-4 rounded-lg border border-blue-200">
                 <div className="space-y-2">
                   <label className="block text-sm font-semibold text-blue-900">
-                    Google Gemini API Key
+                    {t('ai.api_key_label')}
                   </label>
                   <p className="text-xs text-slate-600">
-                    Get your free API key from{" "}
-                    <a
-                      href="https://ai.google.dev"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline font-semibold"
-                    >
-                      Google AI Studio
-                    </a>
-                    . Your API key is only used for this session and never stored.
+                    {t('ai.get_api_key')}
                   </p>
                   <Input
                     type="password"
-                    placeholder="Paste your Google Gemini API key here"
+                    placeholder={t('ai.api_key_placeholder')}
                     value={apiKey}
                     onChange={(e) => setApiKey(e.target.value)}
                     className="font-mono text-sm"
@@ -327,12 +318,12 @@ Please respond ONLY with valid JSON in this exact format:
                 {loading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Analyzing...
+                    {t('ai.analyzing')}
                   </>
                 ) : (
                   <>
                     <Sparkles className="mr-2 h-4 w-4" />
-                    Get AI Recommendations
+                    {t('ai.get_recommendations')}
                   </>
                 )}
               </Button>
@@ -343,25 +334,25 @@ Please respond ONLY with valid JSON in this exact format:
               <Card className="p-4 bg-blue-50 border-blue-200 h-full flex flex-col justify-between">
                 <div className="space-y-3">
                   <h3 className="font-semibold text-sm text-foreground">
-                    How It Works
+                    {t('ai.how_it_works')}
                   </h3>
                   <ul className="text-xs space-y-2 text-muted-foreground">
                     <li className="flex gap-2">
                       <span className="text-primary font-bold">1.</span>
-                      <span>Share your profile (GPA, preferences, goals)</span>
+                      <span>{t('ai.step1')}</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-primary font-bold">2.</span>
-                      <span>Add your Google Gemini API key</span>
+                      <span>{t('ai.step2')}</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-primary font-bold">3.</span>
-                      <span>Get personalized recommendations instantly</span>
+                      <span>{t('ai.step3')}</span>
                     </li>
                   </ul>
                 </div>
                 <p className="text-xs text-slate-600 pt-4 border-t border-blue-200">
-                  Free • Secure • Private • Your data is never stored
+                  {t('ai.free_secure')}
                 </p>
               </Card>
             </div>
@@ -372,7 +363,7 @@ Please respond ONLY with valid JSON in this exact format:
             <div className="space-y-6 pt-6 border-t border-slate-200">
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2">
-                  Recommended Universities
+                  {t('ai.recommended_unis')}
                 </h3>
                 <p className="text-muted-foreground mb-4">{suggestions.reasoning}</p>
               </div>
@@ -387,15 +378,15 @@ Please respond ONLY with valid JSON in this exact format:
                       <h4 className="font-bold text-foreground">{uni.name}</h4>
                       <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
                         <div>
-                          <span className="font-semibold">City:</span> {uni.city}
+                          <span className="font-semibold">{t('ai.city')}:</span> {uni.city}
                         </div>
                         <div>
-                          <span className="font-semibold">Ranking:</span>{" "}
-                          {uni.ranking_kz || "N/A"}
+                          <span className="font-semibold">{t('ai.ranking')}:</span>{" "}
+                          {uni.ranking_kz || t('ai.not_available')}
                         </div>
                         <div className="col-span-2">
-                          <span className="font-semibold">Founded:</span>{" "}
-                          {uni.founded || "N/A"}
+                          <span className="font-semibold">{t('ai.founded')}:</span>{" "}
+                          {uni.founded || t('ai.not_available')}
                         </div>
                       </div>
                     </div>
