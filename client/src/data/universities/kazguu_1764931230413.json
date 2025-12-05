@@ -8,10 +8,11 @@
     "official_website": "https://kazguu.kz",
     "tuition_range": "1 300 000 – 1 600 000 ₸",
     "images": [
-      "https://kazguu.kz/media/campus1.jpg",
-      "https://kazguu.kz/media/campus2.jpg",
-      "https://kazguu.kz/media/hall.jpg"
+      "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1605627834710-fa5a6e17e3d8?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1498243691581-b145161ba57d?q=80&w=1000&auto=format&fit=crop"
     ],
+    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
     "tour_video": "https://www.youtube.com/embed/TYNzxWQ8nSk",
 
     "about": {

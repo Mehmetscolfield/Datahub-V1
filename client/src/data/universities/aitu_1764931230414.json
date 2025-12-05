@@ -8,10 +8,11 @@
     "official_website": "https://astanait.edu.kz",
     "tuition_range": "1 300 000 – 1 450 000 ₸",
     "images": [
-      "https://astanait.edu.kz/images/campus1.jpg",
-      "https://astanait.edu.kz/images/campus2.jpg",
-      "https://astanait.edu.kz/images/hall.jpg"
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-f06f70504ce0?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
     ],
+    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
     "tour_video": "https://www.youtube.com/embed/f2gT3LKvZCw",
 
     "about": {

@@ -8,10 +8,11 @@
     "official_website": "https://kbtu.edu.kz",
     "tuition_range": "1 700 000 – 2 000 000 ₸",
     "images": [
-      "https://kbtu.edu.kz/campus.jpg",
-      "https://kbtu.edu.kz/building.jpg",
-      "https://kbtu.edu.kz/labs.jpg"
+      "https://images.unsplash.com/photo-1516321318423-f06f70504ce0?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1605627834710-fa5a6e17e3d8?q=80&w=1000&auto=format&fit=crop"
     ],
+    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
     "tour_video": "https://www.youtube.com/embed/YPiWgR5LQko",
 
     "about": {

@@ -580,7 +580,8 @@ export default function UniversityDetails() {
           </section>
         )}
 
-        
+        {/* Partners */}
+        {university.international_cooperation?.partners && (
            <section className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 mb-20">
              <h2 className="text-2xl font-bold font-heading mb-8 text-center">{t('details.partners')}</h2>
              <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-center opacity-80">
@@ -592,7 +593,6 @@ export default function UniversityDetails() {
              </div>
            </section>
         )}
-        </div>
       </div>
     </Layout>
   );

@@ -8,10 +8,11 @@
     "official_website": "https://tou.edu.kz",
     "tuition_range": "850 000 – 1 300 000 ₸",
     "images": [
-      "https://tou.edu.kz/media/campus1.jpg",
-      "https://tou.edu.kz/media/campus2.jpg",
-      "https://tou.edu.kz/media/labs.jpg"
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1541539227805-cb42ed2fd25b?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?q=80&w=1000&auto=format&fit=crop"
     ],
+    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
     "tour_video": "https://www.youtube.com/embed/QSS18AyDoSo",
 
     "about": {

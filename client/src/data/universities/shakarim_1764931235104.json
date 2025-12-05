@@ -8,10 +8,11 @@
     "official_website": "https://shakarim.edu.kz",
     "tuition_range": "750 000 – 1 100 000 ₸",
     "images": [
-      "https://shakarim.edu.kz/media/campus1.jpg",
-      "https://shakarim.edu.kz/media/campus2.jpg",
-      "https://shakarim.edu.kz/media/students.jpg"
+      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1605627834710-fa5a6e17e3d8?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1469022563149-aa64dbd37dae?q=80&w=1000&auto=format&fit=crop"
     ],
+    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
     "tour_video": "https://www.youtube.com/embed/D9j2Bng2qU4",
 
     "about": {

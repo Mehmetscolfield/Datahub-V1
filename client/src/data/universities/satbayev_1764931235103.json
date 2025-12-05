@@ -8,10 +8,11 @@
     "official_website": "https://satbayev.university",
     "tuition_range": "1 000 000 – 1 300 000 ₸",
     "images": [
-      "https://satbayev.university/img/campus1.jpg",
-      "https://satbayev.university/img/campus2.jpg",
-      "https://satbayev.university/img/labs.jpg"
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1516321318423-f06f70504ce0?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
     ],
+    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
     "tour_video": "https://www.youtube.com/embed/gQh3bH4rQig",
 
     "about": {

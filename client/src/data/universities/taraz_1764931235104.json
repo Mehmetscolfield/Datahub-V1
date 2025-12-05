@@ -8,10 +8,11 @@
     "official_website": "https://dulaty.kz",
     "tuition_range": "700 000 – 1 050 000 ₸",
     "images": [
-      "https://dulaty.kz/media/campus1.jpg",
-      "https://dulaty.kz/media/campus2.jpg",
-      "https://dulaty.kz/media/students.jpg"
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1605627834710-fa5a6e17e3d8?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1498243691581-b145161ba57d?q=80&w=1000&auto=format&fit=crop"
     ],
+    "logo": "https://images.unsplash.com/photo-1611339555312-e607c90352fd?q=80&w=200&auto=format&fit=crop",
     "tour_video": "https://www.youtube.com/embed/UkC8jXoiYxw",
 
     "about": {
