@@ -1,0 +1,125 @@
+{
+  "university": {
+    "id": "kazguu",
+    "name": "KAZGUU University",
+    "city": "Astana",
+    "founded": 1994,
+    "ranking_kz": 9,
+    "official_website": "https://kazguu.kz",
+    "tuition_range": "1 300 000 – 1 600 000 ₸",
+    "images": [
+      "https://kazguu.kz/media/campus1.jpg",
+      "https://kazguu.kz/media/campus2.jpg",
+      "https://kazguu.kz/media/hall.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/TYNzxWQ8nSk",
+
+    "about": {
+      "mission": "To prepare skilled professionals in law, business, and public administration.",
+      "history": "Established as Kazakhstan’s leading law university.",
+      "leadership": "Rector: Talgat Narikbayev",
+      "achievements": [
+        "Best law faculty in Kazakhstan",
+        "Modern moot court hall",
+        "International legal partnerships"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Law (LLB)",
+        "faculty": "School of Law",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 500 000 ₸",
+        "description": "Covers Kazakh civil law, criminal law, constitutional law, and international law.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["History of Kazakhstan", "Human Rights"],
+          "profile_subject_minimum": 15,
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "International Law",
+        "faculty": "Law",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 600 000 ₸",
+        "description": "Focuses on treaties, diplomacy, human rights, and comparative legal studies.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["History", "World History"],
+          "IELTS_minimum": 6.0
+        }
+      },
+
+      {
+        "program": "Public Administration",
+        "faculty": "School of Public Policy",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 300 000 ₸",
+        "description": "Teaches governance, public sector management, policy analysis, and administration.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math Literacy", "Reading"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Business Administration",
+        "faculty": "Business School",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 300 000 ₸",
+        "description": "Covers management, business planning, analytics, and marketing.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Geography"],
+          "IELTS_minimum": 5.0
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Take UNT",
+          "Choose program group",
+          "Submit documents",
+          "Enroll based on grant or paid basis"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport and transcripts",
+          "Provide IELTS/TOEFL",
+          "Pass internal exam (if needed)"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Leiden Law School",
+        "MGIMO University",
+        "University of Oslo",
+        "University of Warsaw"
+      ]
+    },
+
+    "comparison": {
+      "city": "Astana",
+      "ielts_required": "5.5–6.0",
+      "program_count": 4,
+      "strengths": ["Law", "International Law", "Public Policy"]
+    }
+  }
+}

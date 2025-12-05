@@ -1,0 +1,112 @@
+{
+  "university": {
+    "id": "buketov",
+    "name": "Karaganda Buketov University",
+    "city": "Karaganda",
+    "founded": 1972,
+    "ranking_kz": 15,
+    "official_website": "https://buketov.edu.kz",
+    "tuition_range": "850 000 – 1 150 000 ₸",
+    "images": [
+      "https://buketov.edu.kz/media/campus1.jpg",
+      "https://buketov.edu.kz/media/campus2.jpg",
+      "https://buketov.edu.kz/media/hall.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/OC1O_E1Ed0g",
+
+    "about": {
+      "mission": "To provide strong academic training in sciences, humanities, and technology.",
+      "history": "One of the largest regional universities in Kazakhstan.",
+      "leadership": "Rector: Nurlan Dulatbekov",
+      "achievements": [
+        "Modern research labs",
+        "Strong mathematics and science programs",
+        "Active international partnerships"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Computer Science",
+        "faculty": "Mathematics & IT",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Covers algorithms, programming, databases, and applied informatics.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Chemistry",
+        "faculty": "Natural Sciences",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 000 000 ₸",
+        "description": "Studies organic, inorganic, and analytical chemistry with lab work.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Chemistry", "Biology"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "History",
+        "faculty": "Humanities",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "900 000 ₸",
+        "description": "Covers Kazakhstan history, world history, sociology, and anthropology.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["World History", "History of Kazakhstan"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "Physics",
+        "faculty": "Sciences",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "950 000 ₸",
+        "description": "Studies classical & modern physics, mathematics, and lab experiments.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 4.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": { "steps": ["UNT exam", "Submit documents", "Enroll"] },
+      "international": {
+        "steps": ["Passport", "Transcripts", "English certificate"]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Tomsk State University",
+        "University of Warsaw",
+        "Ural Federal University"
+      ]
+    },
+
+    "comparison": {
+      "city": "Karaganda",
+      "ielts_required": "4.5–5.0",
+      "program_count": 4,
+      "strengths": ["Sciences", "Mathematics", "Computer Science"]
+    }
+  }
+}

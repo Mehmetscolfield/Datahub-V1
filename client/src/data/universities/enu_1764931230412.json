@@ -1,0 +1,125 @@
+{
+  "ununiversity": {
+    "id": "enu",
+    "name": "L.N. Gumilyov Eurasian National University",
+    "city": "Astana",
+    "founded": 1996,
+    "ranking_kz": 3,
+    "official_website": "https://enu.kz",
+    "tuition_range": "850 000 – 1 300 000 ₸",
+    "images": [
+      "https://enu.kz/campus.jpg",
+      "https://enu.kz/main-building.jpg",
+      "https://enu.kz/hall.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/njmywZ0pQAc",
+
+    "about": {
+      "mission": "To develop competitive professionals and drive scientific innovation in Kazakhstan.",
+      "history": "Founded in 1996 and rapidly became one of the leading universities in Central Asia.",
+      "leadership": "Rector: Yerlan Sydykov",
+      "achievements": [
+        "Strong humanities and engineering programs",
+        "Active international cooperation",
+        "Large modern campus in Astana"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Information Systems",
+        "faculty": "Faculty of Information Technology",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Focuses on enterprise systems, networks, digital technologies.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math Literacy", "Math", "Informatics"],
+          "profile_subject": "Informatics",
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Computer Engineering",
+        "faculty": "Engineering",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 200 000 ₸",
+        "description": "Covers digital circuits, embedded systems, programming, and hardware design.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math", "Physics"],
+          "profile_subject": "Physics",
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "International Relations",
+        "faculty": "Faculty of Journalism and Political Science",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 000 000 ₸",
+        "description": "Prepares specialists in diplomacy, foreign policy, and global studies.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["History", "World History"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Law",
+        "faculty": "Faculty of Law",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 250 000 ₸",
+        "description": "Covers civil law, criminal law, governmental systems, and legal procedures.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subject": ["History", "Human Rights"],
+          "IELTS_minimum": 5.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Take UNT",
+          "Submit documents",
+          "Enroll based on grant or paid basis"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport",
+          "Provide transcripts",
+          "Provide English or Kazakh/Russian certificate"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Moscow State University",
+        "Ankara University",
+        "Tallinn University",
+        "University of Latvia"
+      ]
+    },
+
+    "comparison": {
+      "city": "Astana",
+      "ielts_required": "5.5",
+      "program_count": 4,
+      "strengths": ["Engineering", "Law", "IR"]
+    }
+  }
+}

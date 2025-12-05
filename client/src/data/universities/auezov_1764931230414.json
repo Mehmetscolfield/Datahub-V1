@@ -1,0 +1,115 @@
+{
+  "university": {
+    "id": "auezov",
+    "name": "Auezov South Kazakhstan University",
+    "city": "Shymkent",
+    "founded": 1943,
+    "ranking_kz": 14,
+    "official_website": "https://auezov.edu.kz",
+    "tuition_range": "850 000 – 1 200 000 ₸",
+    "images": [
+      "https://auezov.edu.kz/media/campus1.jpg",
+      "https://auezov.edu.kz/media/campus2.jpg",
+      "https://auezov.edu.kz/media/labs.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/-5benpVxw20",
+
+    "about": {
+      "mission": "To train specialists in engineering, agriculture, IT, and humanities.",
+      "history": "One of the largest universities in southern Kazakhstan.",
+      "leadership": "Rector: Myrzakhmetov Zhasulan",
+      "achievements": [
+        "Strong engineering and agricultural programs",
+        "Modern scientific labs",
+        "Large student community"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Software Engineering",
+        "faculty": "Information Technology",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 150 000 ₸",
+        "description": "Focuses on systems architecture, programming, and software development.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Mechanical Engineering",
+        "faculty": "Engineering",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Covers machine design, CAD, thermodynamics, and industrial engineering.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Agriculture & Crop Production",
+        "faculty": "Agriculture",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "950 000 ₸",
+        "description": "Studies agronomy, plant science, and agricultural technology.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Biology", "Chemistry"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "Tourism",
+        "faculty": "Economics & Tourism",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "900 000 ₸",
+        "description": "Teaches hospitality management, tourism services, and marketing.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Geography", "Math"],
+          "IELTS_minimum": 4.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": { "steps": ["UNT exam", "Application submission", "Enrollment"] },
+      "international": {
+        "steps": [
+          "Passport & transcripts",
+          "English certificate (if needed)"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Anadolu University",
+        "University of Sofia",
+        "Tashkent Chemical Institute"
+      ]
+    },
+
+    "comparison": {
+      "city": "Shymkent",
+      "ielts_required": "4.5–5.0",
+      "program_count": 4,
+      "strengths": ["Engineering", "Agriculture"]
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "university": {
+    "id": "kbtu",
+    "name": "Kazakh-British Technical University",
+    "city": "Almaty",
+    "founded": 2001,
+    "ranking_kz": 5,
+    "official_website": "https://kbtu.edu.kz",
+    "tuition_range": "1 700 000 – 2 000 000 ₸",
+    "images": [
+      "https://kbtu.edu.kz/campus.jpg",
+      "https://kbtu.edu.kz/building.jpg",
+      "https://kbtu.edu.kz/labs.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/YPiWgR5LQko",
+
+    "about": {
+      "mission": "To prepare world-class IT, business, and energy specialists for Kazakhstan and the global market.",
+      "history": "Founded with international support, KBTU became a leading English-medium technical university.",
+      "leadership": "Rector: Maratbek Gabdullin",
+      "achievements": [
+        "Strongest IT and business programs in Kazakhstan",
+        "Many programs taught fully in English",
+        "High employment rate among graduates"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Computer Science",
+        "faculty": "School of Information Technology",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 950 000 ₸",
+        "description": "Specializes in programming, AI, data science, and software engineering.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["Math", "Physics"],
+          "profile_subject_minimum": 20,
+          "IELTS_minimum": 6.0,
+          "Duolingo": 95
+        }
+      },
+
+      {
+        "program": "Cybersecurity",
+        "faculty": "School of IT",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 950 000 ₸",
+        "description": "Covers ethical hacking, network defense, cryptography, and security systems.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 6.0
+        }
+      },
+
+      {
+        "program": "Information Systems",
+        "faculty": "IT",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 850 000 ₸",
+        "description": "Focuses on enterprise technologies, networks, and data systems.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Economics & Finance",
+        "faculty": "Business School",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "1 900 000 ₸",
+        "description": "Covers financial markets, investment, econometrics, and banking.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Geography"],
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Oil and Gas Engineering",
+        "faculty": "Energy School",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "2 000 000 ₸",
+        "description": "Covers drilling, reservoir engineering, and petroleum production.",
+
+        "requirements": {
+          "UNT_minimum": 75,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 6.0
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Take UNT",
+          "Submit online application",
+          "Provide IELTS/TOEFL",
+          "Final selection"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport",
+          "Provide transcripts",
+          "English certificate required"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "London School of Economics",
+        "Heriot-Watt University",
+        "University of Aberdeen"
+      ]
+    },
+
+    "comparison": {
+      "city": "Almaty",
+      "ielts_required": "6.0",
+      "program_count": 5,
+      "strengths": ["IT", "Finance", "Oil & Gas"]
+    }
+  }
+}

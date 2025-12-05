@@ -1,0 +1,110 @@
+{
+  "university": {
+    "id": "toraighyrov",
+    "name": "Toraighyrov University",
+    "city": "Pavlodar",
+    "founded": 1960,
+    "ranking_kz": 17,
+    "official_website": "https://tou.edu.kz",
+    "tuition_range": "850 000 – 1 300 000 ₸",
+    "images": [
+      "https://tou.edu.kz/media/campus1.jpg",
+      "https://tou.edu.kz/media/campus2.jpg",
+      "https://tou.edu.kz/media/labs.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/QSS18AyDoSo",
+
+    "about": {
+      "mission": "To prepare qualified specialists in engineering, energy, IT, and humanities.",
+      "history": "Major regional university with strong engineering foundation.",
+      "leadership": "Rector: Nurken Amrin",
+      "achievements": [
+        "Strong power engineering programs",
+        "Well-equipped laboratories",
+        "Regional research center"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Power Engineering",
+        "faculty": "Engineering & Energy",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 200 000 ₸",
+        "description": "Covers power systems, electrical engineering, and renewable energy.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Mechanical Engineering",
+        "faculty": "Engineering",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 150 000 ₸",
+        "description": "Studies machine design, CAD, thermodynamics, and materials science.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Information Systems",
+        "faculty": "IT",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 000 000 ₸",
+        "description": "Programming, databases, networks, and cybersecurity fundamentals.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Economics",
+        "faculty": "Business",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "900 000 ₸",
+        "description": "Microeconomics, finance, business analytics.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Math", "Geography"],
+          "IELTS_minimum": 4.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": { "steps": ["UNT", "Apply", "Enroll"] },
+      "international": { "steps": ["Passport", "Transcripts", "English certificate"] }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Tomsk Polytechnic University",
+        "Omsk State Technical University",
+        "University of Lodz"
+      ]
+    },
+
+    "comparison": {
+      "city": "Pavlodar",
+      "ielts_required": "4.5–5.0",
+      "program_count": 4,
+      "strengths": ["Power Engineering", "Mechanical Engineering"]
+    }
+  }
+}

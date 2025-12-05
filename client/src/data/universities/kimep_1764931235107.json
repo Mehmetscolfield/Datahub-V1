@@ -1,0 +1,127 @@
+{
+  "university": {
+    "id": "kimep",
+    "name": "KIMEP University",
+    "city": "Almaty",
+    "founded": 1992,
+    "ranking_kz": 8,
+    "official_website": "https://kimep.kz",
+    "tuition_range": "3 300 000 – 3 500 000 ₸",
+    "images": [
+      "https://kimep.kz/media/campus1.jpg",
+      "https://kimep.kz/media/campus2.jpg",
+      "https://kimep.kz/media/students.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/puQ3ZRUjXgU",
+
+    "about": {
+      "mission": "To provide world-class Western-style education in business, law, and social sciences.",
+      "history": "KIMEP was founded with U.S. support and remains Kazakhstan’s top private university for business.",
+      "leadership": "President: Chan Young Bang",
+      "achievements": [
+        "Top business school in Central Asia",
+        "Fully English-medium instruction",
+        "Strong connections with employers"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Bachelor of Business Administration (BBA)",
+        "faculty": "College of Business",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "3 500 000 ₸",
+        "description": "Covers management, marketing, finance, accounting, and analytics.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math Literacy", "Geography"],
+          "IELTS_minimum": 5.5,
+          "alt_english": "KIMEP English exam available"
+        }
+      },
+
+      {
+        "program": "International Relations",
+        "faculty": "College of Social Sciences",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "3 300 000 ₸",
+        "description": "Focuses on global politics, diplomacy, international law, and security studies.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["World History", "Reading"],
+          "IELTS_minimum": 6.0
+        }
+      },
+
+      {
+        "program": "Law (LLB)",
+        "faculty": "School of Law",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "3 400 000 ₸",
+        "description": "Covers international law, comparative law, legal research, and Kazakhstani law.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["History", "Human Rights"],
+          "IELTS_minimum": 6.0
+        }
+      },
+
+      {
+        "program": "Economics",
+        "faculty": "College of Social Sciences",
+        "duration": "4 years",
+        "language": "English",
+        "tuition_fee_year": "3 350 000 ₸",
+        "description": "Strong quantitative program covering micro, macro, econometrics, and finance.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Geography"],
+          "IELTS_minimum": 5.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Submit UNT results",
+          "Submit English certificate",
+          "Online application"
+        ],
+        "scholarships": [
+          "20% – 100% KIMEP Merit Scholarship"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport & transcripts",
+          "Provide IELTS/TOEFL",
+          "Optional interview"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Korea University",
+        "University of Wisconsin",
+        "University of London",
+        "Kyoto University"
+      ]
+    },
+
+    "comparison": {
+      "city": "Almaty",
+      "ielts_required": "5.5–6.0",
+      "program_count": 4,
+      "strengths": ["Business", "IR", "Law"]
+    }
+  }
+}

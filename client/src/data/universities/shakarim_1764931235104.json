@@ -1,0 +1,112 @@
+{
+  "university": {
+    "id": "shakarim",
+    "name": "Shakarim University",
+    "city": "Semey",
+    "founded": 1952,
+    "ranking_kz": 18,
+    "official_website": "https://shakarim.edu.kz",
+    "tuition_range": "750 000 – 1 100 000 ₸",
+    "images": [
+      "https://shakarim.edu.kz/media/campus1.jpg",
+      "https://shakarim.edu.kz/media/campus2.jpg",
+      "https://shakarim.edu.kz/media/students.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/D9j2Bng2qU4",
+
+    "about": {
+      "mission": "To train professionals in natural sciences, IT, pedagogy, and agriculture.",
+      "history": "One of the most respected universities in Eastern Kazakhstan.",
+      "leadership": "Rector: Kamalzhan Nadyrov",
+      "achievements": [
+        "Strong agricultural and biology programs",
+        "Modern laboratories",
+        "Growing IT faculty"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Biology",
+        "faculty": "Natural Sciences",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "900 000 ₸",
+        "description": "Studies botany, zoology, genetics, biotechnology, and ecology.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Biology", "Chemistry"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "Information Systems",
+        "faculty": "IT",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 050 000 ₸",
+        "description": "Programming, software engineering, and applied informatics.",
+
+        "requirements": {
+          "UNT_minimum": 60,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Agronomy",
+        "faculty": "Agriculture",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "850 000 ₸",
+        "description": "Crop science, soil analysis, seed production, and agricultural biotechnology.",
+
+        "requirements": {
+          "UNT_minimum": 55,
+          "UNT_subjects": ["Biology", "Chemistry"],
+          "IELTS_minimum": 4.5
+        }
+      },
+
+      {
+        "program": "Primary Education",
+        "faculty": "Pedagogy",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "800 000 ₸",
+        "description": "Covers child development, pedagogy, psychology, and teaching practice.",
+
+        "requirements": {
+          "UNT_minimum": 50,
+          "UNT_subjects": ["World History", "Reading"],
+          "IELTS_minimum": 4.0
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": { "steps": ["UNT exam", "Submit documents", "Enroll"] },
+      "international": {
+        "steps": ["Passport", "Transcripts", "English certificate (if required)"]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Siberian Federal University",
+        "University of Debrecen",
+        "Tomsk State University"
+      ]
+    },
+
+    "comparison": {
+      "city": "Semey",
+      "ielts_required": "4.0–5.0",
+      "program_count": 4,
+      "strengths": ["Biology", "Agriculture", "IT"]
+    }
+  }
+}

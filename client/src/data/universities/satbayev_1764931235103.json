@@ -1,0 +1,143 @@
+{
+  "university": {
+    "id": "satbayev",
+    "name": "Satbayev University",
+    "city": "Almaty",
+    "founded": 1934,
+    "ranking_kz": 4,
+    "official_website": "https://satbayev.university",
+    "tuition_range": "1 000 000 – 1 300 000 ₸",
+    "images": [
+      "https://satbayev.university/img/campus1.jpg",
+      "https://satbayev.university/img/campus2.jpg",
+      "https://satbayev.university/img/labs.jpg"
+    ],
+    "tour_video": "https://www.youtube.com/embed/gQh3bH4rQig",
+
+    "about": {
+      "mission": "To prepare engineering, technical, and scientific leaders for Kazakhstan’s industrial development.",
+      "history": "One of Kazakhstan’s oldest and strongest engineering universities, particularly in petroleum, mining, geology, and applied sciences.",
+      "leadership": "Rector: Mukhambetkali Burkitbayev",
+      "achievements": [
+        "Kazakhstan’s top engineering school",
+        "Strong industry partnerships",
+        "Advanced laboratories",
+        "High employment rate of graduates"
+      ]
+    },
+
+    "programs": [
+      {
+        "program": "Computer Engineering",
+        "faculty": "Institute of Automation and Information Technologies",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 250 000 ₸",
+        "description": "Focuses on computer architecture, embedded systems, programming, and automation.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Physics"],
+          "profile_subject_minimum": 15,
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Software Engineering",
+        "faculty": "Information Technology",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 260 000 ₸",
+        "description": "Focus on software design, systems architecture, web technologies, and mobile development.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math Literacy", "Math", "Physics"],
+          "profile_subject": "Physics",
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Geology & Exploration of Mineral Resources",
+        "faculty": "Institute of Geology",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 100 000 ₸",
+        "description": "Covers mineral exploration, geology, geophysics, and surveying.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Geography", "Chemistry"],
+          "IELTS_minimum": 5.0
+        }
+      },
+
+      {
+        "program": "Petroleum Engineering",
+        "faculty": "Institute of Oil and Gas",
+        "duration": "4 years",
+        "language": "Kazakh/Russian",
+        "tuition_fee_year": "1 300 000 ₸",
+        "description": "Prepares petroleum engineers in drilling, reservoir engineering, oil & gas production.",
+
+        "requirements": {
+          "UNT_minimum": 70,
+          "UNT_subjects": ["Math", "Physics"],
+          "profile_subject_minimum": 20,
+          "IELTS_minimum": 5.5
+        }
+      },
+
+      {
+        "program": "Mechanical Engineering",
+        "faculty": "Mechanical Engineering",
+        "duration": "4 years",
+        "tuition_fee_year": "1 150 000 ₸",
+        "language": "Kazakh/Russian",
+        "description": "Covers machine design, manufacturing, thermodynamics, and applied mechanics.",
+
+        "requirements": {
+          "UNT_minimum": 65,
+          "UNT_subjects": ["Math", "Physics"],
+          "IELTS_minimum": 5.5
+        }
+      }
+    ],
+
+    "admission_and_enrollment": {
+      "local": {
+        "steps": [
+          "Take UNT",
+          "Select engineering program group",
+          "Submit documents through eGov",
+          "Enroll based on grant or contract"
+        ]
+      },
+      "international": {
+        "steps": [
+          "Submit passport & transcripts",
+          "Pass internal exam (if required)",
+          "Provide IELTS 5.5"
+        ]
+      }
+    },
+
+    "international_cooperation": {
+      "partners": [
+        "Colorado School of Mines",
+        "University of Lorraine",
+        "Tomsk Polytechnic University",
+        "Gubkin Russian State University of Oil and Gas"
+      ]
+    },
+
+    "comparison": {
+      "city": "Almaty",
+      "ielts_required": "5.5",
+      "program_count": 5,
+      "strengths": ["Engineering", "Petroleum", "Geology"]
+    }
+  }
+}
