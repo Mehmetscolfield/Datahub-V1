@@ -1,236 +1,254 @@
-# Datahub V1 - University Information Platform
+﻿# Datahub V1 - University Information Platform
 
-A full-stack web application for exploring, comparing, and managing university information. Built with modern web technologies including React, Express, TypeScript, and PostgreSQL.
+A full-stack web application for exploring, comparing, and managing university information. Built with React, Express, TypeScript, and other modern tools.
 
-## 🎯 Overview
+## Overview
 
-Datahub V1 is a comprehensive university information portal that allows users to:
-- Browse university information with detailed profiles
-- Compare multiple universities side-by-side
-- Save favorite universities
-- Filter universities by various criteria
-- Access university data in multiple languages (i18n support)
+Datahub V1 lets users browse university profiles, compare universities side-by-side, save favorites, filter by criteria, and view content in multiple languages (English, Kazakh, Russian).
 
-## ✨ Features
+## Quick Links
 
-- **University Directory**: Browse a comprehensive list of universities with detailed information
-- **University Profiles**: View detailed information for individual universities
-- **Comparison Tool**: Compare multiple universities side-by-side
-- **Favorites System**: Save and manage your favorite universities
-- **Advanced Filtering**: Filter universities by various criteria using the sidebar
-- **Multi-language Support**: i18n support for international users
-- **Responsive Design**: Beautiful, responsive UI built with Radix UI components
-- **Dark Mode Support**: Theme switching with next-themes
-- **Real-time Updates**: WebSocket support for real-time data updates
+- `client/` — React frontend
+- `server/` — Express backend
+- `attached_assets/` — University JSON data and assets
 
-## 🛠️ Tech Stack
+## Features
 
-### Frontend
-- **React 19** - UI framework
-- **TypeScript** - Type-safe development
-- **Vite** - Build tool and dev server
-- **TailwindCSS** - Utility-first CSS framework
-- **Radix UI** - Unstyled, accessible component library
-- **React Query (TanStack)** - Server state management
-- **Wouter** - Lightweight client-side routing
-- **React Hook Form** - Form state management
-- **Zod** - Schema validation
-- **Framer Motion** - Animation library
-- **Recharts** - Data visualization
+- University directory and detailed profiles
+- Comparison tool
+- Favorites management
+- Advanced filtering and sorting
+- Internationalization (i18n) — English, Kazakh, Russian
+- Responsive UI built with TailwindCSS and Radix components
+- Optional AI-powered recommendations feature (client-side API key input)
 
-### Backend
-- **Express** - Node.js web framework
-- **TypeScript** - Type-safe backend development
-- **Drizzle ORM** - Type-safe SQL query builder
-- **PostgreSQL** - Database
-- **Passport.js** - Authentication
-- **Express Session** - Session management
-- **WebSocket (ws)** - Real-time communication
+## Tech Stack (short)
 
-### Development Tools
-- **tsx** - TypeScript execution
-- **Drizzle Kit** - Database schema management
-- **PostCSS** - CSS processing
-- **ESBuild** - JavaScript bundler
+- Frontend: React 19, TypeScript, Vite, TailwindCSS
+- Backend: Express, TypeScript, Drizzle ORM (PostgreSQL)
+- Dev tools: `tsx`, PostCSS, Vite
 
-## 📦 Project Structure
+## Getting Started
 
-```
-Uni-Info/
-├── client/                 # React frontend
-│   ├── src/
-│   │   ├── components/    # React components
-│   │   ├── pages/         # Page components
-│   │   ├── hooks/         # Custom React hooks
-│   │   ├── lib/           # Utilities and contexts
-│   │   ├── data/          # Data files
-│   │   ├── App.tsx        # Main app component
-│   │   └── main.tsx       # Entry point
-│   ├── index.html         # HTML template
-│   └── public/            # Static assets
-├── server/                # Express backend
-│   ├── index.ts           # Server entry point
-│   ├── routes.ts          # API routes
-│   ├── storage.ts         # Database operations
-│   ├── static.ts          # Static file serving
-│   └── vite.ts            # Vite integration
-├── shared/                # Shared code
-│   └── schema.ts          # Database schema
-├── script/                # Build scripts
-├── attached_assets/       # University data and assets
-├── vite.config.ts         # Vite configuration
-├── drizzle.config.ts      # Drizzle ORM configuration
-└── tsconfig.json          # TypeScript configuration
+Prerequisites
+
+- Node.js 18+ and npm
+- PostgreSQL (for production/DB work)
+
+Clone and install
+
+```powershell
+git clone https://github.com/Mehmetscolfield/Datahub-V1.git
+cd "Uni-Info\Uni-Info"
+npm install
 ```
 
-## 🚀 Getting Started
+Environment
 
-### Prerequisites
-- Node.js 18+
-- npm or yarn
-- PostgreSQL (for production)
+Create a `.env` in the project root (example values):
 
-### Installation
+```text
+DATABASE_URL=postgresql://user:password@localhost:5432/uni_info
+NODE_ENV=development
+PORT=5000
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Mehmetscolfield/Datahub-V1.git
-   cd Datahub-V1
-   ```
+Database (optional)
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+```powershell
+npm run db:push
+```
 
-3. **Set up environment variables**
-   Create a `.env` file in the root directory:
-   ```bash
-   DATABASE_URL=postgresql://user:password@localhost:5432/uni_info
-   NODE_ENV=development
-   PORT=5000
-   ```
+## Development
 
-4. **Set up the database**
-   ```bash
-   npm run db:push
-   ```
+Start the frontend (Vite dev server):
 
-### Development
+```powershell
+npm run dev:client
+```
 
-1. **Start the development client server**
-   ```bash
-   npm run dev:client
-   ```
-   The client will be available at `http://localhost:5000/`
+Start the backend (Express server) in a separate terminal:
 
-2. **In a separate terminal, start the backend server**
-   ```bash
-   npm run dev
-   ```
+```powershell
+npm run dev
+```
 
-### Production Build
+The frontend runs at `http://localhost:5000/` by default.
 
-1. **Build the application**
-   ```bash
-   npm run build
-   ```
+## Testing Translations (i18n)
 
-2. **Start the production server**
-   ```bash
-   npm start
-   ```
-   The app will be available at `http://localhost:5000/`
+- The translation dictionary lives in `client/src/lib/i18n.tsx`.
+- To test translations in the running app:
+  1. Open `http://localhost:5000/` in your browser.
+  2. Use the language switcher in the navbar to switch between English (`en`), Kazakh (`kz`), and Russian (`ru`).
+  3. Verify that all UI text (labels, buttons, headings) updates. University names intentionally remain untranslated.
 
-## 📝 Available Scripts
+If you find a hardcoded string, add a new key to `client/src/lib/i18n.tsx` and call `t('your.key')` from the component.
 
-- `npm run dev:client` - Start Vite dev server for frontend (port 5000)
-- `npm run dev` - Start Express backend server
-- `npm run build` - Build for production
-- `npm start` - Start production server
-- `npm run check` - Run TypeScript type checking
-- `npm run db:push` - Push database schema changes
+## AI Recommendations (optional)
 
-## 🏗️ Architecture
+- The AI suggestion component (`client/src/components/ai-suggestion.tsx`) lets users paste a Google Gemini API key and a short profile to get recommendations.
+- The API key is entered on the client UI (no server-side key by default). Keep your key private — do not commit it to the repo.
 
-### Frontend Architecture
-- **Routing**: Client-side routing with Wouter
-- **State Management**: React Context for global state (Favorites, Compare)
-- **Server State**: React Query for API data
-- **Forms**: React Hook Form with Zod validation
-- **Styling**: TailwindCSS with component library
+## Troubleshooting
 
-### Backend Architecture
-- **API Routes**: RESTful endpoints under `/api`
-- **Database**: Drizzle ORM for type-safe queries
-- **Authentication**: Passport.js with local strategy
-- **Session**: Express session with PostgreSQL store
-- **Real-time**: WebSocket support via Express HTTP server
+- Vite/Babel errors (e.g. "Identifier 'X' has already been declared"): check for duplicate imports in the affected file. Recent example: duplicate `useI18n` import in `ai-suggestion.tsx`.
+- If the dev server fails to start on port `5000`, verify nothing else is using that port: `netstat -ano | findstr ":5000"`.
+- If HMR shows stale errors, stop Node processes and restart:
 
-## 📄 Pages
+```powershell
+Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force
+npm run dev:client
+```
 
-- **Home** (`/`) - Landing page
-- **Universities** (`/universities`) - Browse all universities
-- **University Details** (`/university/:id`) - View specific university details
-- **Compare** (`/compare`) - Compare multiple universities
-- **Not Found** (`*`) - 404 page
+- Ensure you're in the project root `Uni-Info\Uni-Info` when running `npm` scripts.
 
-## 🔐 Security
+## Contributing
 
-- TypeScript for type safety
-- Zod for runtime validation
-- Passport.js for authentication
-- Express session for secure session management
-- CORS configuration for cross-origin requests
+1. Fork or branch from `main`.
+2. Make changes in a feature branch.
+3. Add tests if applicable.
+4. Commit and push, then open a Pull Request.
 
-## 🌍 Internationalization
+## Scripts
 
-The application includes i18n support for multiple languages. Configure language preferences in the I18n context.
+- `npm run dev:client` — Start frontend dev server (Vite)
+- `npm run dev` — Start backend server (Express)
+- `npm run build` — Build production assets
+- `npm start` — Start production server
+- `npm run db:push` — Push Drizzle schema changes
 
-## 🎨 UI Components
+## License
 
-Built with Radix UI and custom components:
-- Accordion
-- Alert & Alert Dialog
-- Avatar
-- Badge
-- Button & Button Group
-- Card
-- Carousel
-- Checkbox
-- Command
-- Dialog & Drawer
-- Dropdown Menu
-- Form & Input
-- Pagination
-- Progress
-- Radio Group
-- Select
-- Tabs
-- Toast/Toaster
-- And many more...
-
-## 📊 Data
-
-University data is stored in `attached_assets/` with JSON files containing information about various universities in Kazakhstan and other regions.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support, please open an issue on the GitHub repository.
-
-## 🔗 Links
-
-- **Repository**: [https://github.com/Mehmetscolfield/Datahub-V1](https://github.com/Mehmetscolfield/Datahub-V1)
-- **Live Demo**: Available when deployed
+MIT
 
 ---
 
-**Built with ❤️ using React, Express, and TypeScript**
+If you want, I can commit this README update for you and push the branch. Would you like me to do that now?
+﻿# Datahub V1 - University Information Platform
+
+A full-stack web application for exploring, comparing, and managing university information. Built with React, Express, TypeScript, and other modern tools.
+
+## Overview
+
+Datahub V1 lets users browse university profiles, compare universities side-by-side, save favorites, filter by criteria, and view content in multiple languages (English, Kazakh, Russian).
+
+## Quick Links
+
+- `client/` — React frontend
+- `server/` — Express backend
+- `attached_assets/` — University JSON data and assets
+
+## Features
+
+- University directory and detailed profiles
+- Comparison tool
+- Favorites management
+- Advanced filtering and sorting
+- Internationalization (i18n) — English, Kazakh, Russian
+- Responsive UI built with TailwindCSS and Radix components
+- Optional AI-powered recommendations feature (client-side API key input)
+
+## Tech Stack (short)
+
+- Frontend: React 19, TypeScript, Vite, TailwindCSS
+- Backend: Express, TypeScript, Drizzle ORM (PostgreSQL)
+- Dev tools: `tsx`, PostCSS, Vite
+
+## Getting Started
+
+Prerequisites
+
+- Node.js 18+ and npm
+- PostgreSQL (for production/DB work)
+
+Clone and install
+
+```powershell
+git clone https://github.com/Mehmetscolfield/Datahub-V1.git
+cd "Uni-Info\Uni-Info"
+npm install
+```
+
+Environment
+
+Create a `.env` in the project root (example values):
+
+```text
+DATABASE_URL=postgresql://user:password@localhost:5432/uni_info
+NODE_ENV=development
+PORT=5000
+```
+
+Database (optional)
+
+```powershell
+npm run db:push
+```
+
+## Development
+
+Start the frontend (Vite dev server):
+
+```powershell
+npm run dev:client
+```
+
+Start the backend (Express server) in a separate terminal:
+
+```powershell
+npm run dev
+```
+
+The frontend runs at `http://localhost:5000/` by default.
+
+## Testing Translations (i18n)
+
+- The translation dictionary lives in `client/src/lib/i18n.tsx`.
+- To test translations in the running app:
+  1. Open `http://localhost:5000/` in your browser.
+  2. Use the language switcher in the navbar to switch between English (`en`), Kazakh (`kz`), and Russian (`ru`).
+  3. Verify that all UI text (labels, buttons, headings) updates. University names intentionally remain untranslated.
+
+If you find a hardcoded string, add a new key to `client/src/lib/i18n.tsx` and call `t('your.key')` from the component.
+
+## AI Recommendations (optional)
+
+- The AI suggestion component (`client/src/components/ai-suggestion.tsx`) lets users paste a Google Gemini API key and a short profile to get recommendations.
+- The API key is entered on the client UI (no server-side key by default). Keep your key private — do not commit it to the repo.
+
+## Troubleshooting
+
+- Vite/Babel errors (e.g. "Identifier 'X' has already been declared"): check for duplicate imports in the affected file. Recent example: duplicate `useI18n` import in `ai-suggestion.tsx`.
+- If the dev server fails to start on port `5000`, verify nothing else is using that port: `netstat -ano | findstr ":5000"`.
+- If HMR shows stale errors, stop Node processes and restart:
+
+```powershell
+Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force
+npm run dev:client
+```
+
+- Ensure you're in the project root `Uni-Info\Uni-Info` when running `npm` scripts.
+
+## Contributing
+
+1. Fork or branch from `main`.
+2. Make changes in a feature branch.
+3. Add tests if applicable.
+4. Commit and push, then open a Pull Request.
+
+## Scripts
+
+- `npm run dev:client` — Start frontend dev server (Vite)
+- `npm run dev` — Start backend server (Express)
+- `npm run build` — Build production assets
+- `npm start` — Start production server
+- `npm run db:push` — Push Drizzle schema changes
+
+## License
+
+MIT
+
+---
+
+If you want, I can commit this README update for you and push the branch. Would you like me to do that now?
