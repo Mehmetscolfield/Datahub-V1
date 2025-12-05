@@ -26,6 +26,7 @@ export default function Universities() {
     regions: [],
     cities: [],
     programs: [],
+    languages: mode === 'international' ? ['English'] : [],
     tuitionMax: 5000000,
     minIelts: 0,
     minUnt: 0,
@@ -34,6 +35,16 @@ export default function Universities() {
   const [sortBy, setSortBy] = useState("ranking");
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
 
+  // Update filters if mode changes
+  useMemo(() => {
+    if (mode === 'international') {
+       setFilters(prev => ({ ...prev, languages: ['English'] }));
+    } else {
+       // Optional: Reset languages if navigating back to local? 
+       // For now, let's leave it flexible.
+    }
+  }, [mode]);
+
   const filteredUniversities = useMemo(() => {
     return allUniversities.filter((uni) => {
       // Search
@@ -41,22 +52,36 @@ export default function Universities() {
         return false;
       }
 
-      // Region/City
+      // Region
       if (filters.regions.length > 0) {
-        // Simple check: is the city in the selected regions list? 
-        // In a real app, we'd map cities to regions strictly. 
-        // For now, we assume the regions list might contain city names too or we check against city field.
-        const inCity = filters.regions.some(r => uni.city.includes(r));
+        const inRegion = filters.regions.some(r => uni.city.includes(r));
+        if (!inRegion) return false;
+      }
+      
+      // City
+      if (filters.cities.length > 0) {
+        const inCity = filters.cities.some(c => uni.city.includes(c));
         if (!inCity) return false;
       }
 
-      // Programs
-      if (filters.programs.length > 0) {
-        const hasProgram = uni.programs?.some(p => 
-          filters.programs.some(filterProg => p.program.toLowerCase().includes(filterProg.toLowerCase()) || p.description.toLowerCase().includes(filterProg.toLowerCase()))
-        );
-        if (!hasProgram) return false;
+      // Programs & Languages
+      if (filters.programs.length > 0 || filters.languages.length > 0) {
+        const hasMatchingProgram = uni.programs?.some(p => {
+          const matchProg = filters.programs.length === 0 || filters.programs.some(filterProg => 
+            p.program.toLowerCase().includes(filterProg.toLowerCase()) || 
+            p.description.toLowerCase().includes(filterProg.toLowerCase())
+          );
+          const matchLang = filters.languages.length === 0 || filters.languages.some(filterLang => 
+            p.language.toLowerCase().includes(filterLang.toLowerCase())
+          );
+          return matchProg && matchLang;
+        });
+        
+        // Check if the university itself matches language criteria (some unis are fully English)
+        // But strictly we check programs.
+        if (!hasMatchingProgram) return false;
       }
+
 
       // Tuition (parsing "850 000 - 1 300 000 ₸")
       if (uni.tuition_range) {
@@ -167,7 +192,7 @@ export default function Universities() {
             ) : (
               <div className="text-center py-20 bg-slate-50 rounded-xl border border-dashed border-slate-200">
                 <div className="text-muted-foreground">No universities found matching your filters.</div>
-                <Button variant="link" onClick={() => setFilters({ ...filters, search: "", regions: [], programs: [], tuitionMax: 5000000, minIelts: 0, minUnt: 0 })}>
+                <Button variant="link" onClick={() => setFilters({ ...filters, search: "", regions: [], cities: [], programs: [], languages: [], tuitionMax: 5000000, minIelts: 0, minUnt: 0 })}>
                   Clear all filters
                 </Button>
               </div>

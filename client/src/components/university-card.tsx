@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Heart, Trophy } from "lucide-react";
 import { Link } from "wouter";
 import { useI18n } from "@/lib/i18n";
-import { useCompare } from "@/lib/compare-context";
+import { useFavorites } from "@/lib/favorites-context";
 
 interface UniversityCardProps {
   university: University;
@@ -13,16 +13,12 @@ interface UniversityCardProps {
 
 export function UniversityCard({ university }: UniversityCardProps) {
   const { t } = useI18n();
-  const { isInCompare, addToCompare, removeFromCompare } = useCompare();
-  const isCompared = isInCompare(university.id);
+  const { isFavorite, toggleFavorite } = useFavorites();
+  const isFav = isFavorite(university.id);
 
-  const toggleCompare = (e: React.MouseEvent) => {
+  const handleToggleFavorite = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (isCompared) {
-      removeFromCompare(university.id);
-    } else {
-      addToCompare(university);
-    }
+    toggleFavorite(university.id);
   };
 
   // Fallback image if none provided or logic to pick one
@@ -45,10 +41,10 @@ export function UniversityCard({ university }: UniversityCardProps) {
           <Button 
             variant="secondary" 
             size="icon" 
-            className={`rounded-full h-8 w-8 backdrop-blur-sm bg-white/80 hover:bg-white ${isCompared ? 'text-red-500' : 'text-muted-foreground'}`}
-            onClick={toggleCompare}
+            className={`rounded-full h-8 w-8 backdrop-blur-sm bg-white/80 hover:bg-white ${isFav ? 'text-red-500' : 'text-muted-foreground'}`}
+            onClick={handleToggleFavorite}
           >
-            <Heart className={`h-4 w-4 ${isCompared ? 'fill-current' : ''}`} />
+            <Heart className={`h-4 w-4 ${isFav ? 'fill-current' : ''}`} />
           </Button>
         </div>
         {university.ranking_kz && (

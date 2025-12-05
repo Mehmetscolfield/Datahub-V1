@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { I18nProvider } from "@/lib/i18n";
 import { CompareProvider } from "@/lib/compare-context";
+import { FavoritesProvider } from "@/lib/favorites-context";
 
 import Home from "@/pages/home";
 import Universities from "@/pages/universities";
@@ -30,8 +31,10 @@ function App() {
       <TooltipProvider>
         <I18nProvider>
           <CompareProvider>
-            <Toaster />
-            <Router />
+            <FavoritesProvider>
+              <Toaster />
+              <Router />
+            </FavoritesProvider>
           </CompareProvider>
         </I18nProvider>
       </TooltipProvider>

@@ -17,6 +17,7 @@ export interface FiltersState {
   regions: string[];
   cities: string[];
   programs: string[];
+  languages: string[];
   tuitionMax: number;
   minIelts: number;
   minUnt: number;
@@ -41,6 +42,13 @@ export function FilterSidebar({ filters, setFilters, className }: FilterSidebarP
       : [...filters.regions, region];
     setFilters({ ...filters, regions: newRegions });
   };
+  
+  const toggleCity = (city: string) => {
+    const newCities = filters.cities.includes(city)
+      ? filters.cities.filter((c) => c !== city)
+      : [...filters.cities, city];
+    setFilters({ ...filters, cities: newCities });
+  };
 
   const toggleProgram = (program: string) => {
     const newPrograms = filters.programs.includes(program)
@@ -49,12 +57,20 @@ export function FilterSidebar({ filters, setFilters, className }: FilterSidebarP
     setFilters({ ...filters, programs: newPrograms });
   };
 
+  const toggleLanguage = (lang: string) => {
+    const newLangs = filters.languages.includes(lang)
+      ? filters.languages.filter((l) => l !== lang)
+      : [...filters.languages, lang];
+    setFilters({ ...filters, languages: newLangs });
+  };
+
   const resetFilters = () => {
     setFilters({
       search: "",
       regions: [],
       cities: [],
       programs: [],
+      languages: [],
       tuitionMax: 5000000,
       minIelts: 0,
       minUnt: 0,
@@ -64,9 +80,18 @@ export function FilterSidebar({ filters, setFilters, className }: FilterSidebarP
   const regionsList = [
     "Astana", "Almaty", "Shymkent", "Karaganda", "Pavlodar", "Taraz", "Semey", "East Kazakhstan", "West Kazakhstan"
   ];
+  
+  // Common cities list derived from regions for simplicity, or distinct
+  const citiesList = [
+    "Astana", "Almaty", "Shymkent", "Karaganda", "Pavlodar", "Taraz", "Semey", "Kaskelen", "Turkistan"
+  ];
 
   const programsList = [
     "IT", "Computer Science", "Engineering", "Business", "Medicine", "Law", "Education", "Arts", "Agriculture"
+  ];
+  
+  const languagesList = [
+    "English", "Kazakh", "Russian"
   ];
 
   return (
@@ -89,7 +114,7 @@ export function FilterSidebar({ filters, setFilters, className }: FilterSidebarP
         </Button>
       </div>
 
-      <Accordion type="multiple" defaultValue={["regions", "programs", "tuition"]} className="w-full">
+      <Accordion type="multiple" defaultValue={["regions", "programs", "tuition", "languages"]} className="w-full">
         {/* Regions */}
         <AccordionItem value="regions" className="border-b-0">
           <AccordionTrigger className="py-3 hover:no-underline font-medium text-sm">{t('filters.region')}</AccordionTrigger>
@@ -104,6 +129,27 @@ export function FilterSidebar({ filters, setFilters, className }: FilterSidebarP
                   />
                   <Label htmlFor={`region-${region}`} className="text-sm font-normal cursor-pointer text-muted-foreground peer-data-[state=checked]:text-foreground">
                     {region}
+                  </Label>
+                </div>
+              ))}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+        
+        {/* Cities (Optional separate filter as per requirements) */}
+         <AccordionItem value="cities" className="border-b-0">
+          <AccordionTrigger className="py-3 hover:no-underline font-medium text-sm">{t('filters.city')}</AccordionTrigger>
+          <AccordionContent>
+            <div className="space-y-2 pt-1 max-h-40 overflow-y-auto">
+              {citiesList.map((city) => (
+                <div key={city} className="flex items-center space-x-2">
+                  <Checkbox 
+                    id={`city-${city}`} 
+                    checked={filters.cities.includes(city)}
+                    onCheckedChange={() => toggleCity(city)}
+                  />
+                  <Label htmlFor={`city-${city}`} className="text-sm font-normal cursor-pointer text-muted-foreground peer-data-[state=checked]:text-foreground">
+                    {city}
                   </Label>
                 </div>
               ))}
@@ -127,6 +173,27 @@ export function FilterSidebar({ filters, setFilters, className }: FilterSidebarP
                 <span>0 ₸</span>
                 <span>{filters.tuitionMax.toLocaleString()} ₸</span>
               </div>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+
+        {/* Languages */}
+        <AccordionItem value="languages" className="border-b-0">
+          <AccordionTrigger className="py-3 hover:no-underline font-medium text-sm">Language</AccordionTrigger>
+          <AccordionContent>
+            <div className="space-y-2 pt-1">
+              {languagesList.map((lang) => (
+                <div key={lang} className="flex items-center space-x-2">
+                  <Checkbox 
+                    id={`lang-${lang}`}
+                    checked={filters.languages.includes(lang)}
+                    onCheckedChange={() => toggleLanguage(lang)}
+                  />
+                  <Label htmlFor={`lang-${lang}`} className="text-sm font-normal cursor-pointer text-muted-foreground peer-data-[state=checked]:text-foreground">
+                    {lang}
+                  </Label>
+                </div>
+              ))}
             </div>
           </AccordionContent>
         </AccordionItem>

@@ -15,17 +15,21 @@ import {
 } from "@/components/ui/table";
 import { MapPin, Globe, Trophy, Heart, Play, Calendar, DollarSign, CheckCircle } from "lucide-react";
 import { useCompare } from "@/lib/compare-context";
+import { useFavorites } from "@/lib/favorites-context";
 
 export default function UniversityDetails() {
   const [, params] = useRoute("/university/:id");
   const university = useUniversity(params?.id || "");
   const { isInCompare, addToCompare, removeFromCompare } = useCompare();
+  const { isFavorite, toggleFavorite } = useFavorites();
 
   if (!university) {
     return <Layout><div className="p-8 text-center">University not found</div></Layout>;
   }
 
   const isCompared = isInCompare(university.id);
+  const isFav = isFavorite(university.id);
+  
   const mainImage = university.images && university.images.length > 0 
     ? university.images[0] 
     : "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000&auto=format&fit=crop";
@@ -72,9 +76,13 @@ export default function UniversityDetails() {
               >
                  {isCompared ? "Remove from Compare" : "Compare University"}
                </Button>
-               <Button variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-                 <Heart className="w-4 h-4 mr-2" />
-                 Save
+               <Button 
+                  variant="outline" 
+                  className={`bg-white/10 border-white/20 hover:bg-white/20 ${isFav ? 'text-red-400 border-red-400' : 'text-white'}`}
+                  onClick={() => toggleFavorite(university.id)}
+               >
+                 <Heart className={`w-4 h-4 mr-2 ${isFav ? 'fill-current' : ''}`} />
+                 {isFav ? "Saved" : "Save"}
                </Button>
             </div>
           </div>
