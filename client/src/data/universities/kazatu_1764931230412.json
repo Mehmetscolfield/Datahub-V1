@@ -107,6 +107,30 @@
       "ielts_required": "4.5–5.0",
       "program_count": 4,
       "strengths": ["Agriculture", "Veterinary", "Biotechnology"]
-    }
+    },
+    "campus_life": {
+      "student_population": 8000,
+      "international_students": 1200,
+      "campus_size_hectares": 250,
+      "libraries": 2,
+      "sports_facilities": ["Equestrian center", "Sports complex", "Swimming pool"],
+      "clubs_societies": ["Agriculture Club", "Environmental Society", "Veterinary Club"],
+      "accommodation": {
+        "type": "University dormitories and research farms",
+        "capacity": 4000,
+        "cost_per_month": "15 000 – 30 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - especially for agricultural programs",
+      "merit_scholarships": "Available for top students (up to 30%)",
+      "need_based_aid": "Government support for rural students",
+      "agricultural_grants": "Special funding for agriculture majors"
+    },
+    "accreditations": [
+      "Agricultural program accreditation",
+      "Veterinary medicine recognized by regional bodies",
+      "Research farm certifications"
+    ]
   }
 }

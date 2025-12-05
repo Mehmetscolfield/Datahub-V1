@@ -107,6 +107,30 @@
       "ielts_required": "4.5–5.0",
       "program_count": 4,
       "strengths": ["Sciences", "Mathematics", "Computer Science"]
-    }
+    },
+    "campus_life": {
+      "student_population": 10000,
+      "international_students": 1500,
+      "campus_size_hectares": 110,
+      "libraries": 2,
+      "sports_facilities": ["Sports complex", "Fitness center", "Basketball court"],
+      "clubs_societies": ["Math Club", "Science Club", "Programming Club", "Student Council"],
+      "accommodation": {
+        "type": "University dormitories",
+        "capacity": 4000,
+        "cost_per_month": "15 000 – 28 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - allocated by exam performance",
+      "merit_scholarships": "Available for strong math/science students",
+      "need_based_aid": "Support for regional students",
+      "research_scholarships": "Opportunities for science research"
+    },
+    "accreditations": [
+      "Ministry of Education accreditation",
+      "Science program certifications",
+      "Regional research recognition"
+    ]
   }
 }

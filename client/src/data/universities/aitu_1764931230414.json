@@ -120,6 +120,29 @@
       "ielts_required": "5.5",
       "program_count": 4,
       "strengths": ["Cybersecurity", "Artificial Intelligence", "Modern campus"]
-    }
+    },
+    "campus_life": {
+      "student_population": 3500,
+      "international_students": 800,
+      "campus_size_hectares": 12,
+      "libraries": 1,
+      "sports_facilities": ["Fitness center", "Basketball court", "Table tennis"],
+      "clubs_societies": ["Cybersecurity Club", "AI Research Group", "Startup Incubator", "Esports Team"],
+      "accommodation": {
+        "type": "Modern university dormitories in Astana Hub",
+        "capacity": 1200,
+        "cost_per_month": "35 000 – 50 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes, competitive allocation",
+      "merit_scholarships": "Excellence scholarships (up to 50% of tuition)",
+      "need_based_aid": "Limited financial aid programs",
+      "industry_sponsorships": "Tech companies sponsor scholarships"
+    },
+    "accreditations": [
+      "Ministry of Education accreditation",
+      "International accreditation pending"
+    ]
   }
 }

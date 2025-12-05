@@ -97,6 +97,30 @@
       "ielts_required": "5.0–5.5",
       "program_count": 3,
       "strengths": ["Languages", "Translation", "International Relations"]
-    }
+    },
+    "campus_life": {
+      "student_population": 6000,
+      "international_students": 1200,
+      "campus_size_hectares": 18,
+      "libraries": 2,
+      "sports_facilities": ["Sports center", "Basketball court"],
+      "clubs_societies": ["Linguistics Club", "Translation Society", "Debate Team", "Language Exchange"],
+      "accommodation": {
+        "type": "Dormitories in central Almaty",
+        "capacity": 2500,
+        "cost_per_month": "15 000 – 25 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - competitive allocation",
+      "merit_scholarships": "Available for language proficiency",
+      "need_based_aid": "Limited aid for international students",
+      "language_grants": "Special scholarships for multilingual students"
+    },
+    "accreditations": [
+      "Ministry of Education accreditation",
+      "Language program certifications",
+      "Translation association recognition"
+    ]
   }
 }

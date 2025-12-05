@@ -110,6 +110,30 @@
       "ielts_required": "4.5–5.0",
       "program_count": 4,
       "strengths": ["Engineering", "Agriculture"]
-    }
+    },
+    "campus_life": {
+      "student_population": 12000,
+      "international_students": 2000,
+      "campus_size_hectares": 150,
+      "libraries": 3,
+      "sports_facilities": ["Sports complex", "Swimming pool", "Football field", "Fitness center"],
+      "clubs_societies": ["Engineering Club", "Agricultural Society", "Innovation Hub", "Student Government"],
+      "accommodation": {
+        "type": "Modern dormitories with facilities",
+        "capacity": 5000,
+        "cost_per_month": "18 000 – 30 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - generous allocation for engineering",
+      "merit_scholarships": "Merit-based scholarships (up to 25%)",
+      "need_based_aid": "Financial assistance available",
+      "research_grants": "Opportunities for undergraduate research"
+    },
+    "accreditations": [
+      "Regional engineering accreditation",
+      "Ministry of Education accreditation",
+      "Agricultural program recognized"
+    ]
   }
 }

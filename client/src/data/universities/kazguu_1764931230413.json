@@ -120,6 +120,30 @@
       "ielts_required": "5.5–6.0",
       "program_count": 4,
       "strengths": ["Law", "International Law", "Public Policy"]
-    }
+    },
+    "campus_life": {
+      "student_population": 5500,
+      "international_students": 1100,
+      "campus_size_hectares": 22,
+      "libraries": 2,
+      "sports_facilities": ["Fitness center", "Basketball court", "Moot court"],
+      "clubs_societies": ["Law Society", "Debate Team", "Mock Trial", "Legal Aid Clinic"],
+      "accommodation": {
+        "type": "Modern dormitories in business district",
+        "capacity": 2200,
+        "cost_per_month": "25 000 – 40 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Limited - highly competitive",
+      "merit_scholarships": "Excellence scholarships (up to 40%)",
+      "need_based_aid": "Limited financial aid",
+      "law_scholarships": "Sponsored by legal firms"
+    },
+    "accreditations": [
+      "Law school accreditation",
+      "International law association recognition",
+      "Bar association partnership"
+    ]
   }
 }

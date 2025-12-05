@@ -140,6 +140,30 @@
       "ielts_required": "5.5–6.0",
       "program_count": 5,
       "strengths": ["IT", "Law", "IR", "Economics"]
-    }
+    },
+    "campus_life": {
+      "student_population": 20000,
+      "international_students": 3500,
+      "campus_size_hectares": 125,
+      "libraries": 5,
+      "sports_facilities": ["Olympic complex", "Multiple swimming pools", "Fitness centers", "Tennis courts", "Football fields"],
+      "clubs_societies": ["Law Society", "Tech Club", "International Affairs", "Student Leadership"],
+      "accommodation": {
+        "type": "University dormitories and private housing",
+        "capacity": 8000,
+        "cost_per_month": "18 000 – 35 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - highly competitive",
+      "merit_scholarships": "Available (up to 30% of tuition)",
+      "need_based_aid": "Need-based grants for qualified students",
+      "research_grants": "Scholarships for research-oriented students"
+    },
+    "accreditations": [
+      "QS World University Rankings inclusion",
+      "Ministry of Education accreditation",
+      "International program accreditations"
+    ]
   }
 }

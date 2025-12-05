@@ -177,6 +177,31 @@
       "ielts_required": "6.5",
       "program_count": 6,
       "strengths": ["Engineering", "Research", "International faculty"]
-    }
+    },
+    "campus_life": {
+      "student_population": 5000,
+      "international_students": 2000,
+      "campus_size_hectares": 60,
+      "libraries": 2,
+      "sports_facilities": ["Sports complex", "Swimming pool", "Basketball court", "Football field"],
+      "clubs_societies": ["Debate Club", "Research Club", "Entrepreneurship", "Cultural Societies"],
+      "accommodation": {
+        "type": "Modern on-campus dormitories",
+        "capacity": 3500,
+        "cost_per_month": "Included in scholarship"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - Full tuition + stipend for all admitted students",
+      "merit_scholarships": "Enhanced scholarships for high achievers",
+      "need_based_aid": "All admitted students receive full funding",
+      "research_grants": "Opportunities for graduate research funding"
+    },
+    "accreditations": [
+      "Cambridge partnership accreditation",
+      "Duke University partnership",
+      "International research standards",
+      "Central Asian leading research institution"
+    ]
   }
 }

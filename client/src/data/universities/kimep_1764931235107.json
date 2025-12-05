@@ -122,6 +122,30 @@
       "ielts_required": "5.5–6.0",
       "program_count": 4,
       "strengths": ["Business", "IR", "Law"]
-    }
+    },
+    "campus_life": {
+      "student_population": 3200,
+      "international_students": 1100,
+      "campus_size_hectares": 15,
+      "libraries": 1,
+      "sports_facilities": ["Fitness center", "Basketball court", "Recreation area"],
+      "clubs_societies": ["Entrepreneurship Club", "Business Case Competition", "International Affairs", "Sports Team"],
+      "accommodation": {
+        "type": "Student housing options in Almaty",
+        "capacity": 800,
+        "cost_per_month": "40 000 – 70 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Limited - primarily private institution",
+      "merit_scholarships": "Merit scholarships available (up to 50%)",
+      "need_based_aid": "Financial aid for qualified students",
+      "corporate_sponsorships": "Partnership with international companies"
+    },
+    "accreditations": [
+      "AACSB accreditation for business",
+      "American-style curriculum",
+      "International business association recognition"
+    ]
   }
 }

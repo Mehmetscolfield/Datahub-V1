@@ -132,6 +132,30 @@
       "ielts_required": "5.5",
       "program_count": 5,
       "strengths": ["IT", "Business", "Education"]
-    }
+    },
+    "campus_life": {
+      "student_population": 7000,
+      "international_students": 1500,
+      "campus_size_hectares": 45,
+      "libraries": 2,
+      "sports_facilities": ["Sports complex", "Swimming pool", "Basketball courts", "Fitness center"],
+      "clubs_societies": ["Entrepreneurship Club", "Tech Innovators", "Language Club", "Social Impact Group"],
+      "accommodation": {
+        "type": "Campus dormitories with modern facilities",
+        "capacity": 3500,
+        "cost_per_month": "20 000 – 35 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - allocated competitively",
+      "merit_scholarships": "Merit-based scholarships (up to 25% tuition)",
+      "need_based_aid": "Financial aid for qualified students",
+      "internship_grants": "Stipends for internship participants"
+    },
+    "accreditations": [
+      "Ministry of Education accreditation",
+      "International program certifications",
+      "Business program recognized regionally"
+    ]
   }
 }

@@ -107,6 +107,30 @@
       "ielts_required": "4.0–5.0",
       "program_count": 4,
       "strengths": ["Biology", "Agriculture", "IT"]
-    }
+    },
+    "campus_life": {
+      "student_population": 7000,
+      "international_students": 900,
+      "campus_size_hectares": 65,
+      "libraries": 2,
+      "sports_facilities": ["Sports complex", "Basketball court", "Fitness center"],
+      "clubs_societies": ["Biology Club", "Environmental Society", "Tech Club", "Agricultural Club"],
+      "accommodation": {
+        "type": "University dormitories",
+        "capacity": 2800,
+        "cost_per_month": "12 000 – 22 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - allocated competitively",
+      "merit_scholarships": "Available for science students",
+      "need_based_aid": "Regional student support",
+      "agriculture_grants": "Specialized funding for agriculture"
+    },
+    "accreditations": [
+      "Ministry of Education accreditation",
+      "Agricultural program certification",
+      "Regional university recognition"
+    ]
   }
 }

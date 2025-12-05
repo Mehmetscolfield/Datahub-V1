@@ -135,6 +135,30 @@
       "ielts_required": "6.0",
       "program_count": 5,
       "strengths": ["IT", "Finance", "Oil & Gas"]
-    }
+    },
+    "campus_life": {
+      "student_population": 4500,
+      "international_students": 1000,
+      "campus_size_hectares": 28,
+      "libraries": 2,
+      "sports_facilities": ["Fitness center", "Basketball court", "Table tennis", "Badminton"],
+      "clubs_societies": ["Tech Entrepreneurs", "Finance Club", "Robotics Club", "Business Case Competition"],
+      "accommodation": {
+        "type": "Modern dormitories in central Almaty",
+        "capacity": 2000,
+        "cost_per_month": "30 000 – 45 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Limited state grants",
+      "merit_scholarships": "Excellence scholarships (up to 40% of tuition)",
+      "corporate_sponsorships": "Oil & gas companies sponsor students",
+      "international_scholarships": "Partnership scholarships with UK universities"
+    },
+    "accreditations": [
+      "UK QAA accreditation",
+      "Ministry of Education accreditation",
+      "British curriculum standards"
+    ]
   }
 }

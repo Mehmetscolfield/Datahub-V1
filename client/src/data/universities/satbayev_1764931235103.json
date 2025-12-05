@@ -138,6 +138,30 @@
       "ielts_required": "5.5",
       "program_count": 5,
       "strengths": ["Engineering", "Petroleum", "Geology"]
-    }
+    },
+    "campus_life": {
+      "student_population": 9000,
+      "international_students": 1800,
+      "campus_size_hectares": 85,
+      "libraries": 3,
+      "sports_facilities": ["Sports complex", "Swimming pool", "Fitness centers", "Football field"],
+      "clubs_societies": ["Engineering Society", "Robotics Club", "Petroleum Club", "Innovation Lab"],
+      "accommodation": {
+        "type": "Modern on-campus dormitories",
+        "capacity": 4500,
+        "cost_per_month": "18 000 – 35 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes - strong support for engineering",
+      "merit_scholarships": "Merit scholarships (up to 35%)",
+      "industry_sponsorships": "Oil & gas companies sponsor scholarships",
+      "research_grants": "Extensive research funding available"
+    },
+    "accreditations": [
+      "Engineering accreditation authority",
+      "Petroleum industry standards",
+      "International engineering recognition"
+    ]
   }
 }

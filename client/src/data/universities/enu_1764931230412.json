@@ -1,5 +1,5 @@
 {
-  "ununiversity": {
+  "university": {
     "id": "enu",
     "name": "L.N. Gumilyov Eurasian National University",
     "city": "Astana",
@@ -120,6 +120,29 @@
       "ielts_required": "5.5",
       "program_count": 4,
       "strengths": ["Engineering", "Law", "IR"]
-    }
+    },
+    "campus_life": {
+      "student_population": 15000,
+      "international_students": 2500,
+      "campus_size_hectares": 85,
+      "libraries": 3,
+      "sports_facilities": ["Olympic stadium", "Swimming pool", "Fitness centers", "Basketball courts"],
+      "clubs_societies": ["Debate Club", "IT Club", "Photography Club", "Student Government"],
+      "accommodation": {
+        "type": "University dormitories and private housing",
+        "capacity": 5000,
+        "cost_per_month": "20 000 – 40 000 ₸"
+      }
+    },
+    "scholarships_and_financial_aid": {
+      "state_grants": "Yes (allocated through entrance exam competition)",
+      "merit_scholarships": "Available for high achievers (up to 25% tuition)",
+      "need_based_aid": "Limited - primarily through state grants",
+      "international_scholarships": "Government scholarships for international applicants"
+    },
+    "accreditations": [
+      "Institutional accreditation by Ministry of Education (Kazakhstan)",
+      "Program-level accreditations in Engineering and Law"
+    ]
   }
 }
