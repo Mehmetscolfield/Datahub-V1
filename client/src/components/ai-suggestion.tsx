@@ -6,9 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, Sparkles, AlertCircle } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import universities from "@/data/universities";
-import path from "path";
-import * as fs from "fs";
+import { useUniversities } from "@/lib/data";
 
 interface SuggestionResult {
   universities: string[];
@@ -17,6 +15,7 @@ interface SuggestionResult {
 
 export default function AISuggestion() {
   const { t } = useI18n();
+  const universities = useUniversities();
   const [apiKey, setApiKey] = useState("");
   const [userProfile, setUserProfile] = useState("");
   const [loading, setLoading] = useState(false);
@@ -44,7 +43,7 @@ export default function AISuggestion() {
       const universityList = universities
         .map(
           (uni) =>
-            `${uni.name} (${uni.location}, ${uni.type}, Rank: ${uni.ranking})`
+            `${uni.name} (${uni.city}, Ranking: ${uni.ranking_kz || 'N/A'})`
         )
         .join("\n");
 
@@ -300,15 +299,15 @@ Only respond with valid JSON, no other text.`;
                     <h4 className="font-bold text-foreground">{uni.name}</h4>
                     <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
                       <div>
-                        <span className="font-semibold">Location:</span>{" "}
-                        {uni.location}
+                        <span className="font-semibold">City:</span> {uni.city}
                       </div>
                       <div>
                         <span className="font-semibold">Ranking:</span>{" "}
-                        {uni.ranking}
+                        {uni.ranking_kz || "N/A"}
                       </div>
                       <div className="col-span-2">
-                        <span className="font-semibold">Type:</span> {uni.type}
+                        <span className="font-semibold">Founded:</span>{" "}
+                        {uni.founded || "N/A"}
                       </div>
                     </div>
                   </div>
