@@ -123,6 +123,10 @@ const translations: Translations = {
     "ai.not_available": "N/A",
     "ai.please_enter_key": "Please enter your Google Gemini API key",
     "ai.please_tell_about": "Please tell us about yourself (GPA, preferences, etc.)",
+    "ai.title": "AI Advisor",
+    "ai.chat_placeholder": "Describe your profile...",
+    "ai.chat_example": "Example: \"I have 6.0 IELTS, 3.5 GPA, want Engineering\"",
+    "ai.thinking": "Thinking...",
   },
   kz: {
     "nav.universities": "Университеттер",
@@ -238,6 +242,10 @@ const translations: Translations = {
     "ai.not_available": "Қол жетімді емес",
     "ai.please_enter_key": "Google Gemini API кілтіңіздіенгізіңіз",
     "ai.please_tell_about": "Өзіңіз туралы айтыңыз (GPA, қызығушылықтары және т.б.)",
+    "ai.title": "АИ Кеңесші",
+    "ai.chat_placeholder": "Өзіңіздің профиліңізді сипаттаңыз...",
+    "ai.chat_example": "Мысалы: \"Менде 6.0 IELTS, 3.5 GPA, Инженерияны қалайды\"",
+    "ai.thinking": "Ойлануда...",
   },
   ru: {
     "nav.universities": "Университеты",
@@ -353,6 +361,10 @@ const translations: Translations = {
     "ai.not_available": "Недоступно",
     "ai.please_enter_key": "Пожалуйста, введите ваш Google Gemini API ключ",
     "ai.please_tell_about": "Пожалуйста, расскажите о себе (средний балл, предпочтения и т.д.)",
+    "ai.title": "ИИ Консультант",
+    "ai.chat_placeholder": "Опишите ваш профиль...",
+    "ai.chat_example": "Пример: \"У меня 6.0 IELTS, 3.5 GPA, интересует Инженерия\"",
+    "ai.thinking": "Обдумываю...",
   }
 };
 

@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { ArrowRight, GraduationCap, Globe2 } from "lucide-react";
 import { Link } from "wouter";
-import AISuggestion from "@/components/ai-suggestion";
 
 export default function Home() {
   const { t } = useI18n();
@@ -11,11 +10,6 @@ export default function Home() {
   return (
     <Layout>
       <div className="flex-1">
-        {/* AI Suggestion Section - At Top */}
-        <section className="py-4 px-4 md:px-8 bg-slate-100/50 border-b border-slate-200">
-          <AISuggestion />
-        </section>
-
         {/* Hero Section */}
         <section className="relative py-12 md:py-24 lg:py-32 px-4 md:px-8 max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4 max-w-3xl mx-auto">

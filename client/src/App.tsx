@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { I18nProvider } from "@/lib/i18n";
 import { CompareProvider } from "@/lib/compare-context";
 import { FavoritesProvider } from "@/lib/favorites-context";
+import AIChatWidget from "@/components/ai-chat-widget";
 
 import Home from "@/pages/home";
 import Universities from "@/pages/universities";
@@ -33,6 +34,7 @@ function App() {
           <CompareProvider>
             <FavoritesProvider>
               <Toaster />
+              <AIChatWidget />
               <Router />
             </FavoritesProvider>
           </CompareProvider>
